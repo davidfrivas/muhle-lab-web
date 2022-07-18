@@ -18,4 +18,5 @@ ul {
 
 .welcome-content {
     display: flex;
+    flex-direction: column;
 }
