@@ -9,6 +9,7 @@ body {
 .welcome-container {
     display: flex;
     flex-direction: column;
+    background-image: url("./images/lab-pic-2022");
 }
 
 .header {
@@ -31,7 +32,6 @@ ul {
 }
 
 .welcome-content {
-    background-image: url("./images/lab-pic-2022");
     display: flex;
     flex-direction: column;
     align-items: center;
