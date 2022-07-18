@@ -14,13 +14,13 @@ body {
     background-size: cover;
     background-position: center;
     height: 100%;
+    padding: 50px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
 }
 
 .logo {
