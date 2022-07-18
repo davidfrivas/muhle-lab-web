@@ -8,6 +8,10 @@
     justify-content: space-between;
 }
 
+.logo {
+    font-size: 48px;
+}
+
 ul {
     display: flex;
     list-style-type: none;
