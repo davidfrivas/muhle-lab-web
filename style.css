@@ -13,6 +13,7 @@
 }
 
 ul {
+    font-size: 28px;
     display: flex;
     list-style-type: none;
     gap: 16px;
