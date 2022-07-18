@@ -10,7 +10,7 @@ body {
 .welcome-container {
     display: flex;
     flex-direction: column;
-    background-image: url("./images/lab-pic-2022");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./images/lab-pic-2022");
     background-size: cover;
     background-position: center;
 }
