@@ -22,6 +22,12 @@ ul {
     align-items: center;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0px;
+}
+
 h1 {
     font-size: 82px;
     text-transform: uppercase;
