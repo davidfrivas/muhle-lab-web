@@ -62,6 +62,10 @@ h1 {
     padding: 50px;
 }
 
-h2, h3 {
+h2 {
+    font-size: 48px;
+} 
+
+h3 {
     font-size: 24px;
 }
