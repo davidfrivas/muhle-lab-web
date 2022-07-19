@@ -84,6 +84,10 @@ h3 {
     padding-right: 100px;
 }
 
+.member-summary p {
+    font-size: 18px;
+}
+
 .david-rivas {
     width: 300px;
     height: auto;
