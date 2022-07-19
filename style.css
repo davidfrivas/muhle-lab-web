@@ -78,6 +78,8 @@ h3 {
 
 .lab-member {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .member-summary p {
