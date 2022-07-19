@@ -37,6 +37,10 @@ ul {
     padding: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .welcome-content {
     display: flex;
     flex-direction: column;
