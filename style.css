@@ -78,6 +78,10 @@ h3 {
     display: flex;
 }
 
+.member-summary {
+    padding-right: 100px;
+}
+
 .david-rivas {
     width: 300px;
     height: auto;
