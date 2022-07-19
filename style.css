@@ -1,6 +1,5 @@
 * {
     font-family: Arial, Verdana, sans-serif;
-    color: #fff;
 }
 
 body {
@@ -15,6 +14,7 @@ body {
     background-position: center;
     height: 100%;
     padding: 50px;
+    color: #fff;
 }
 
 .header {
