@@ -91,6 +91,10 @@ h3 {
     font-size: 18px;
 }
 
+ion-icon {
+    font-size: 48px;
+}
+
 .linkedin {
     color: #0a66c2;
 }
