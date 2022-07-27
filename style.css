@@ -25,6 +25,7 @@ body {
 
 .logo {
     font-size: 36px;
+    text-transform: lowercase;
 }
 
 ul {
