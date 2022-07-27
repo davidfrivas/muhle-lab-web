@@ -113,6 +113,7 @@ ion-icon {
 .location {
     display: flex;
     justify-content: center;
+    gap: 100px;
 }
 
 .location-text {
