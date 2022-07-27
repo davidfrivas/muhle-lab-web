@@ -56,6 +56,8 @@ a {
 }
 
 .mission-statement {
+    display: flex;
+    flex-direction: column;
     padding: 50px 100px;
 }
 
