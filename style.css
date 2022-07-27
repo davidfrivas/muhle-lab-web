@@ -61,7 +61,7 @@ a {
     align-items: center;
     padding: 150px 200px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/well-plate.jpeg");
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     color: #fff;
 }
