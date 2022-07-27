@@ -50,6 +50,10 @@ a {
     text-align: center;
 }
 
+.banner-content p {
+    font-size: 18px;
+}
+
 h1,
 h2,
 h3 {
