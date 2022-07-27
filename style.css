@@ -113,3 +113,8 @@ ion-icon {
 .location {
     display: flex;
 }
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+}
