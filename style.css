@@ -125,6 +125,7 @@ ion-icon {
 .contact-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .location {
