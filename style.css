@@ -122,6 +122,11 @@ ion-icon {
 
 /* CSS for contact.html */
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .location {
     display: flex;
     justify-content: center;
