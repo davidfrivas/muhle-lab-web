@@ -154,6 +154,11 @@ ion-icon {
     display: flex;
 }
 
+.contact-text hr {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 .join {
     max-width: 300px;
 }
