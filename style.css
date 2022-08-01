@@ -111,6 +111,7 @@ p {
 
 .footer-address {
     display: flex;
+    align-items: center;
 }
 
 .footer-address hr {
