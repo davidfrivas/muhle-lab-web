@@ -108,6 +108,10 @@ p {
     display: flex;
 }
 
+.footer-address hr {
+    margin: 8px 25px 8px 0px;
+}
+
 /* CSS for team.html page */
 
 .wrapper {
