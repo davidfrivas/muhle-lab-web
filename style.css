@@ -97,6 +97,10 @@ h3 {
 
 /* CSS for team.html page */
 
+.team {
+    width: 1000px;
+}
+
 .lab-member {
     display: flex;
     justify-content: center;
