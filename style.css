@@ -153,3 +153,7 @@ ion-icon {
 .contact-text {
     display: flex;
 }
+
+.join {
+    max-width: 300px;
+}
