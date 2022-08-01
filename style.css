@@ -147,7 +147,7 @@ ion-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 200px;
+    margin: 50px 0px;
 }
 
 .location {
