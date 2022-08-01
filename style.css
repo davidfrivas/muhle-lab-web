@@ -105,6 +105,10 @@ p {
     padding: 50px;
 }
 
+.footer .logo {
+    margin-bottom: 25px;
+}
+
 .footer-address {
     display: flex;
 }
