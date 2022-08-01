@@ -99,6 +99,11 @@ p {
     line-height: 1.8em;
 }
 
+.footer {
+    background-color: #313131;
+    color: white;
+}
+
 /* CSS for team.html page */
 
 .wrapper {
