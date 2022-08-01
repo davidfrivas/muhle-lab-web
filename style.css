@@ -149,3 +149,7 @@ ion-icon {
     align-items: center;
     margin: 50px 0px;
 }
+
+.contact-text {
+    display: flex;
+}
