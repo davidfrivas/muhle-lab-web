@@ -102,6 +102,7 @@ p {
 .footer {
     background-color: #313131;
     color: white;
+    padding: 50px;
 }
 
 .footer-address {
