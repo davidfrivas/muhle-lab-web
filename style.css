@@ -104,6 +104,10 @@ p {
     color: white;
 }
 
+.footer-address {
+    display: flex;
+}
+
 /* CSS for team.html page */
 
 .wrapper {
