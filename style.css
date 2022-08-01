@@ -95,6 +95,10 @@ h3 {
     font-size: 24px;
 }
 
+p {
+    line-height: 1.8em;
+}
+
 /* CSS for team.html page */
 
 .team {
