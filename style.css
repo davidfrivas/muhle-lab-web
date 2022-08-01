@@ -149,14 +149,3 @@ ion-icon {
     align-items: center;
     margin: 50px 0px;
 }
-
-.location {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-}
-
-.location-text {
-    display: flex;
-    flex-direction: column;
-}
