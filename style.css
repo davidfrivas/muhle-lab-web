@@ -136,6 +136,10 @@ p {
     gap: 100px;
 }
 
+.lab-member.even {
+    flex-direction: row-reverse;
+}
+
 .member-summary {
     width: 500px;
 }
