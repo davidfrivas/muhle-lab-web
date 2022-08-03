@@ -148,6 +148,10 @@ p {
     flex-direction: row-reverse;
 }
 
+.even img {
+    align-self: flex-end;
+}
+
 .member-summary {
     width: calc(50% - 5%);
     min-width: 400px;
