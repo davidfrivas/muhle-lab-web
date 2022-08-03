@@ -186,6 +186,8 @@ hr {
 
 .alumni {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* CSS for contact.html */
