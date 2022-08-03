@@ -190,6 +190,7 @@ hr {
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/lab-pic-2021.JPG");
     background-size: cover;
+    background-position: center;
 }
 
 /* CSS for contact.html */
