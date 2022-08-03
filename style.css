@@ -143,6 +143,7 @@ p {
 .member-summary {
     width: calc(50% - 5%);
     min-width: 400px;
+    align-self: center;
 }
 
 .member-summary p {
