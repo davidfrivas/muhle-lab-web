@@ -141,6 +141,7 @@ p {
 
 .member-summary {
     width: calc(50% - 5%);
+    min-width: 400px;
 }
 
 .member-summary p {
