@@ -140,6 +140,10 @@ p {
     gap: 50px;
 }
 
+.lab-member.rebecca {
+    flex-wrap: wrap;
+}
+
 .lab-member.even {
     flex-direction: row-reverse;
 }
