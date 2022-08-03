@@ -184,6 +184,10 @@ hr {
     margin-right: 68px;
 }
 
+.alumni {
+    display: flex;
+}
+
 /* CSS for contact.html */
 
 .contact-container {
