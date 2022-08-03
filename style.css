@@ -140,7 +140,7 @@ p {
 }
 
 .member-summary {
-    width: 500px;
+    width: calc(50% - 5%);
 }
 
 .member-summary p {
