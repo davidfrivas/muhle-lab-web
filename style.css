@@ -162,7 +162,7 @@ ion-icon {
 .david-rivas,
 .mahdia-begum,
 .rebecca-muhle {
-    width: 300px;
+    width: calc(50% - 5%);
     height: auto;
 }
 
