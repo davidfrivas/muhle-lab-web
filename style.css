@@ -146,7 +146,6 @@ p {
 
 .lab-member.even {
     flex-direction: row-reverse;
-    align-items: flex-end;
 }
 
 .member-summary {
