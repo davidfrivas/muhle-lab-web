@@ -214,6 +214,10 @@ hr {
     margin: 50px 0px;
 }
 
+.alumni-list span {
+    font-weight: bold;
+}
+
 /* CSS for contact.html */
 
 .contact-container {
