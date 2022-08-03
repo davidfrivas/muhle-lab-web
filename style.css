@@ -133,7 +133,6 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    gap: 100px;
 }
 
 .lab-member.even {
