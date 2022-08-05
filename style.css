@@ -221,7 +221,8 @@ hr {
 /* CSS for contact.html */
 
 .lab-banner.contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/sackler.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/sackler.jpeg");
+    background-position: top center;
 }
 
 .contact-container {
