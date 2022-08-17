@@ -231,15 +231,30 @@ hr {
     border: 1px solid #737373;
 }
 
-.figure-2,
-.figure-3 {
-    width: 400px;
+.fig2-fig3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.derubeis-nature-2014,
-.asd-risk-network {
-    width: 100%;
+.derubeis-nature-2014 {
+    width: 450px;
     height: auto;
+}
+
+.asd-risk-network {
+    width: 300px;
+    height: auto;
+}
+
+.figure-2 {
+    max-width: 450px;
+}
+
+.figure-3 {
+    display: flex;
+    align-items: center;
+    max-width: 560px;
 }
 
 /* CSS for contact.html */
