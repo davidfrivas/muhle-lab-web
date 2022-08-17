@@ -225,6 +225,10 @@ hr {
 
 /*CSS for research.html */
 
+.research-overview {
+    margin-top: 50px;
+}
+
 .hchd8-dnm-diagram {
     width: 100%;
     height: auto;
