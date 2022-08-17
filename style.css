@@ -229,6 +229,10 @@ hr {
     margin-top: 50px;
 }
 
+figure {
+    margin: 32px 40px;
+}
+
 figcaption {
     font-size: 14px;
 }
