@@ -257,6 +257,11 @@ hr {
     max-width: 560px;
 }
 
+.hr-research {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 /* CSS for contact.html */
 
 .lab-banner.contact {
