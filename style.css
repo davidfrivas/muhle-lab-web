@@ -225,6 +225,12 @@ hr {
 
 /*CSS for research.html */
 
+.lab-banner.research {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/nissl-banner.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
 .research-overview {
     margin-top: 50px;
 }
