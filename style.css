@@ -127,6 +127,10 @@ p {
 
 /* CSS for team.html page */
 
+.lab-banner.team {
+    background-position: center 75%;
+}
+
 .wrapper {
     max-width: 1170px;
     margin: 0 auto;
