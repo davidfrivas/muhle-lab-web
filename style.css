@@ -286,9 +286,13 @@ figcaption {
 
 /* CSS for funding.html */
 
+.funding-source {
+    margin: 50px;
+}
+
 .hr-funding {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* CSS for contact.html */
