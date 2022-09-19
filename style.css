@@ -290,6 +290,10 @@ figcaption {
 
 /* CSS for funding.html */
 
+.funding-source.top {
+    margin-top: 58px;
+}
+
 .funding-source {
     margin: 50px 150px;
 }
