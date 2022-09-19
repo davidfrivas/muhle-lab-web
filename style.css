@@ -298,7 +298,7 @@ figcaption {
 .funding-logo {
     margin-top: 21.28px;
     max-width: 345px;
-    height: auto;
+    max-height: 100px;
 }
 
 .hr-funding {
