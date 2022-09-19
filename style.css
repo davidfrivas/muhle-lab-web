@@ -136,6 +136,10 @@ p {
     margin: 0 auto;
 }
 
+.top {
+    margin-top: 58px;
+}
+
 .lab-member {
     display: flex;
     flex-wrap: wrap-reverse;
