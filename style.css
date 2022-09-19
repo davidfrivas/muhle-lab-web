@@ -290,6 +290,11 @@ figcaption {
     margin: 50px;
 }
 
+.funding-link {
+    text-decoration: underline;
+    color: #0a66c2;
+}
+
 .funding-logo {
     margin-top: 21.28px;
     max-width: 345px;
