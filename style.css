@@ -294,6 +294,10 @@ figcaption {
     margin-top: 58px;
 }
 
+.funding-source.bottom {
+    margin-bottom: 58px;
+}
+
 .funding-source {
     margin: 50px 150px;
 }
