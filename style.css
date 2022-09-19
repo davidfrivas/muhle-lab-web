@@ -231,6 +231,10 @@ hr {
     font-weight: bold;
 }
 
+.lab-alumni.bottom {
+    margin-bottom: 58px;
+}
+
 /*CSS for research.html */
 
 .lab-banner.research {
