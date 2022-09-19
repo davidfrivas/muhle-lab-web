@@ -284,6 +284,13 @@ figcaption {
     margin-right: 0px;
 }
 
+/* CSS for funding.html */
+
+.hr-funding {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* CSS for contact.html */
 
 .lab-banner.contact {
