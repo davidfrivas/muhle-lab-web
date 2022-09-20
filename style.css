@@ -84,6 +84,10 @@ a {
     width: 300px;
 }
 
+.news-date {
+    font-size: 12px;
+}
+
 .news-img {
     width: 100%;
     height: auto;
