@@ -88,6 +88,10 @@ a {
     font-size: 12px;
 }
 
+.news-box-title {
+    font-size: 18px;
+}
+
 .news-img {
     width: 100%;
     height: auto;
