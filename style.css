@@ -80,6 +80,11 @@ a {
     font-weight: bold;
 }
 
+.latest-news-title {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
 .news-box {
     width: 300px;
     margin: 0px 25px 50px 25px;
