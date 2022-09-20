@@ -89,6 +89,10 @@ a {
     margin-bottom: 25px;
 }
 
+.news-boxes {
+    display: flex;
+}
+
 .news-box {
     width: 300px;
     margin: 0px 25px 50px 25px;
