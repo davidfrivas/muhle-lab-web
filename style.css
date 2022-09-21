@@ -411,6 +411,10 @@ figcaption {
     color: white;
 }
 
+.swiper .swiper-pagination-bullet-active {
+    background: white;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
