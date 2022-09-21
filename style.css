@@ -384,7 +384,7 @@ figcaption {
     margin: 0 auto;
 }
 
-.blog-post-entry img {
+.blog-post-thumbnail {
     width: 100%;
     height: auto;
     margin-bottom: 25px;
