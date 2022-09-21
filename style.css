@@ -406,6 +406,11 @@ figcaption {
     height: auto;
 }
 
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    color: white;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
