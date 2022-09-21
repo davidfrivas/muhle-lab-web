@@ -309,10 +309,6 @@ hr {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/lab-pic-2021.JPG");
 }
 
-.team-alumni-link:hover h1 {
-    color: rgb(154, 137, 180);
-}
-
 /* CSS for alumni.html */
 
 .lab-banner.alumni {
