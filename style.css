@@ -91,6 +91,10 @@ a {
     margin-right: 25px;
 }
 
+.latest-news p:after {
+    content: ">";
+}
+
 .latest-news-title {
     margin-left: 25px;
     margin-bottom: 25px;
