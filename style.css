@@ -96,7 +96,7 @@ a {
 
 .latest-news p {
     color: #0000FF;
-    font-weight: bold;
+    font-weight: 600;
     text-align: end;
     margin-right: 25px;
 }
