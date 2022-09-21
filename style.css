@@ -369,6 +369,11 @@ figcaption {
     margin: 50px;
 }
 
+
+.news-blog-post h3 {
+    color: #208CA7;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
