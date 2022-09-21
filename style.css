@@ -53,6 +53,10 @@ a {
     color: inherit;
 }
 
+.header a:hover {
+    color: #9A89B4;
+}
+
 .banner-content {
     display: flex;
     flex-direction: column;
