@@ -31,6 +31,9 @@ body {
 
 ul {
     font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     display: flex;
     list-style-type: none;
     gap: 18px;
