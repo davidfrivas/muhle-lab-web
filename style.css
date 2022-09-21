@@ -374,6 +374,10 @@ figcaption {
     color: #208CA7;
 }
 
+.news-blog-post h2 {
+    font-size: 54px;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
