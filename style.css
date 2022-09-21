@@ -141,6 +141,10 @@ a {
     margin-bottom: 10px;
 }
 
+.news-img.columbia {
+    object-fit: contain;
+}
+
 h1,
 h2,
 h3 {
