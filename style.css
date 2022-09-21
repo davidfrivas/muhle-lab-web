@@ -365,6 +365,10 @@ figcaption {
     border-color:rgb(0 0 0 / 13%);
 }
 
+.news-blog-post {
+    margin: 50px;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
