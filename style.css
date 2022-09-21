@@ -379,6 +379,11 @@ figcaption {
     margin-bottom: 50px;
 }
 
+.news-blog-post p {
+    width: 50vw;
+    margin: 0 auto;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
