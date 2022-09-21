@@ -14,7 +14,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/lab-pic-2022");
     background-size: cover;
     background-position: center bottom;
-    padding: 50px;
+    padding: 25px 50px;
     color: #fff;
 }
 
