@@ -297,6 +297,10 @@ hr {
     text-align: center;
 }
 
+.team-alumni-link:hover .team-alumni {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/lab-pic-2021.JPG");
+}
+
 /* CSS for alumni.html */
 
 .lab-banner.alumni {
