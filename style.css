@@ -349,6 +349,13 @@ figcaption {
     background-position: center 60%;
 }
 
+/* CSS for news posts */
+
+.news-post {
+    background-image: none;
+    color: black;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
