@@ -397,8 +397,8 @@ figcaption {
 }
 
 .swiper {
-    width: 50vw;
-    height: 50vw;
+    width: 50em;
+    height: 50em;
 }
 
 .swiper-slide img {
