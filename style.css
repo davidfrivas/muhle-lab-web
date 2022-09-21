@@ -356,6 +356,11 @@ figcaption {
     color: black;
 }
 
+.news-post-hr {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
