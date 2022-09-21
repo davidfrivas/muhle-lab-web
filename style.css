@@ -444,6 +444,10 @@ figcaption {
     color: #0000FF;
 }
 
+.funding-link:hover {
+    color: #2C6676;
+}
+
 .funding-logo {
     margin-top: 21.28px;
     max-width: 345px;
