@@ -390,6 +390,11 @@ figcaption {
     margin-bottom: 25px;
 }
 
+.swiper {
+    width: 50vw;
+    height: 100vh;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
