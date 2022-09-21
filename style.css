@@ -260,6 +260,10 @@ ion-icon {
     color: #0a66c2;
 }
 
+.linkedin:hover {
+    color: #2C6676;
+}
+
 .github {
     color: #0d1117;
 }
