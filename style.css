@@ -346,7 +346,7 @@ figcaption {
 
 .lab-banner.news {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/ihc-brain.jpg");
-    background-position: center 60%;
+    background-position: center 45%;
 }
 
 /* CSS for news posts */
