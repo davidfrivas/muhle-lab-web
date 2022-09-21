@@ -384,6 +384,11 @@ figcaption {
     margin: 0 auto;
 }
 
+.blog-post-entry img {
+    width: 100%;
+    height: auto;
+}
+
 /* CSS for funding.html */
 
 .funding-source.top {
