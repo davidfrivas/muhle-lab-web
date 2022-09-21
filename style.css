@@ -91,7 +91,7 @@ a {
     margin-right: 25px;
 }
 
-.latest-news p:after {
+.latest-news p a:after {
     content: ">";
 }
 
