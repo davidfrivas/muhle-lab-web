@@ -105,6 +105,10 @@ a {
     content: ">";
 }
 
+.latest-news p a:hover {
+    color: #2C6676;
+}
+
 .latest-news-title {
     margin-left: 25px;
     margin-bottom: 25px;
