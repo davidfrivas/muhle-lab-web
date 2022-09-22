@@ -83,6 +83,10 @@ a {
     color: inherit;
 }
 
+.header-link.inverted {
+    color: white;
+}
+
 .dropdown:hover > a,
 .header .header-link:hover {
     color: #9A89B4;
