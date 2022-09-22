@@ -53,7 +53,7 @@ a {
     color: inherit;
 }
 
-.header a:hover {
+.header .header-link:hover {
     color: #9A89B4;
 }
 
