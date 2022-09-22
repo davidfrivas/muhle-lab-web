@@ -43,7 +43,7 @@ body {
     padding: 0px;
 }
 
-.navbar a {
+.navbar .header-link {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
