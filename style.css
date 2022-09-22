@@ -44,6 +44,14 @@ body {
     padding: 0px;
 }
 
+.navbar a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: inherit;
