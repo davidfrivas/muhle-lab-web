@@ -496,6 +496,11 @@ figcaption {
 
 /* CSS for funding.html */
 
+.lab-banner.funding {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/estrous.jpeg");
+    background-position: top;
+}
+
 .funding-source.top {
     margin-top: 58px;
 }
