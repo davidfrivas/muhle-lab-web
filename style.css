@@ -42,6 +42,7 @@ body {
     margin: 0px;
     padding: 0px;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .navbar .header-link {
