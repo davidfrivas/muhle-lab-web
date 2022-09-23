@@ -252,8 +252,8 @@ p {
     background-position: center 75%;
 }
 
-.wrapper {
-    max-width: 1600px;
+.team-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ p {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 50px;
     gap: 50px;
 }
@@ -315,8 +315,8 @@ ion-icon {
 .david-rivas,
 .mahdia-begum,
 .rebecca-muhle {
-    width: calc(50% - 5%);
-    height: auto;
+    width: auto;
+    height: 600px;
 }
 
 hr {
