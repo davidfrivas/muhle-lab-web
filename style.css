@@ -1,8 +1,12 @@
+/* Website font */
+
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
+
+/* General webpage structure */
 
 body {
     margin: 0px;
@@ -15,6 +19,8 @@ body {
     background-color: white;
 }
 
+/* General webpage banner */
+
 .lab-banner {
     display: flex;
     flex-direction: column;
@@ -24,6 +30,8 @@ body {
     padding: 25px 50px;
     color: #fff;
 }
+
+/* Navbar */
 
 .header {
     display: flex;
@@ -160,6 +168,8 @@ h3 {
 p {
     line-height: 1.8em;
 }
+
+/* Footer */
 
 .footer {
     background-color: #1E1926;
