@@ -107,6 +107,31 @@ a {
     color: #9A89B4
 }
 
+/* Footer */
+
+.footer {
+    background-color: #1E1926;
+    color: white;
+    padding: 50px;
+}
+
+.footer .logo {
+    margin-bottom: 25px;
+}
+
+.footer-address {
+    display: flex;
+    align-items: center;
+}
+
+.footer-address hr {
+    align-self: stretch;
+    margin: 15px 25px 15px 0px;
+    border-color: #9A89B4;
+}
+
+/* CSS for index.html */
+
 .banner-content {
     display: flex;
     flex-direction: column;
@@ -167,29 +192,6 @@ h3 {
 
 p {
     line-height: 1.8em;
-}
-
-/* Footer */
-
-.footer {
-    background-color: #1E1926;
-    color: white;
-    padding: 50px;
-}
-
-.footer .logo {
-    margin-bottom: 25px;
-}
-
-.footer-address {
-    display: flex;
-    align-items: center;
-}
-
-.footer-address hr {
-    align-self: stretch;
-    margin: 15px 25px 15px 0px;
-    border-color: #9A89B4;
 }
 
 /* CSS for team.html page */
