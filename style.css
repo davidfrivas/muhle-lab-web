@@ -137,70 +137,6 @@ a {
     font-weight: 300;
 }
 
-.latest-news {
-    margin: 75px 50px;
-}
-
-.latest-news p {
-    color: #0000FF;
-    font-weight: 600;
-    text-align: end;
-    margin-right: 25px;
-}
-
-.latest-news p a:after {
-    content: ">";
-}
-
-.latest-news p a:hover {
-    color: #2C6676;
-}
-
-.latest-news-title {
-    margin-left: 25px;
-    margin-bottom: 25px;
-    font-size: 36px;
-}
-
-.news-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 50px;
-    justify-items: center;
-}
-
-.news-box {
-    width: 300px;
-    margin: 0px 25px 50px 25px;
-}
-
-.news-date {
-    font-size: 12px;
-    color: #389CB7;
-    margin-bottom: 10px;
-}
-
-.news-box a:hover .news-box-title {
-    color: #9A89B4;
-}
-
-.news-box-title {
-    font-size: 18px;
-}
-
-.news-img {
-    float: left;
-    object-fit: cover;
-    width: 300px;
-    height: 200px;
-    margin-bottom: 10px;
-}
-
-.news-img.columbia {
-    object-fit: contain;
-    background-color: #FDF7FF;
-}
-
 h1,
 h2,
 h3 {
@@ -430,6 +366,70 @@ figcaption {
 .lab-banner.news {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("./images/ihc-brain.jpg");
     background-position: center 40%;
+}
+
+.latest-news {
+    margin: 75px 50px;
+}
+
+.latest-news p {
+    color: #0000FF;
+    font-weight: 600;
+    text-align: end;
+    margin-right: 25px;
+}
+
+.latest-news p a:after {
+    content: ">";
+}
+
+.latest-news p a:hover {
+    color: #2C6676;
+}
+
+.latest-news-title {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    font-size: 36px;
+}
+
+.news-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+    justify-items: center;
+}
+
+.news-box {
+    width: 300px;
+    margin: 0px 25px 50px 25px;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #389CB7;
+    margin-bottom: 10px;
+}
+
+.news-box a:hover .news-box-title {
+    color: #9A89B4;
+}
+
+.news-box-title {
+    font-size: 18px;
+}
+
+.news-img {
+    float: left;
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.news-img.columbia {
+    object-fit: contain;
+    background-color: #FDF7FF;
 }
 
 /* CSS for news posts */
