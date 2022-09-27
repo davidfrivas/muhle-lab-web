@@ -364,11 +364,6 @@ figcaption {
         flex-wrap: wrap;
     }
 
-    .research-aim.gif {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
     .straub-tail {
         min-width: 100%;
     }
