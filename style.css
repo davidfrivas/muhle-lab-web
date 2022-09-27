@@ -387,12 +387,9 @@ sup {
 .chd8-tag,
 .chd8-hnsc,
 .straub-tail {
+    min-width: 300px;
     max-width: 400px;
     height: auto;
-}
-
-.straub-tail {
-    min-width: 400px;
 }
 
 .chd8-tag img,
