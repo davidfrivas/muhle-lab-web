@@ -374,11 +374,8 @@ figcaption {
     .research-aim {
         flex-wrap: wrap;
     }
-
-    .straub-tail {
-        min-width: 100%;
-    }
 }
+
 sup { 
     line-height: 0;
     vertical-align: super; 
@@ -398,7 +395,7 @@ sup {
 .chd8-tag,
 .straub-tail {
     min-width: 400px;
-    max-width: 500px;
+    max-width: 450px;
     height: auto;
 }
 
