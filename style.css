@@ -369,20 +369,14 @@ figcaption {
     }
 
     .research-aim.gif {
-        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .straub-tail {
         min-width: 100%;
     }
 }
-
-@media screen and (max-width: 900px) {
-    .research-aim.gif {
-        flex-wrap: wrap;
-    }
-}
-
 sup { 
     line-height: 0;
     vertical-align: super 
