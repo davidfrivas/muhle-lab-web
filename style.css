@@ -370,6 +370,10 @@ figcaption {
     justify-content: center;
 }
 
+.research-aim-text p {
+    margin-bottom: 0px;
+}
+
 @media screen and (max-width: 1070px) {
     .research-aim {
         flex-wrap: wrap;
