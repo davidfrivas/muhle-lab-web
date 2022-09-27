@@ -339,7 +339,7 @@ figcaption {
 
 .hchd8-dnm-diagram,
 .chip-seq {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
