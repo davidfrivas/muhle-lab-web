@@ -368,6 +368,7 @@ figcaption {
 
 .research-aim {
     display: flex;
+    justify-content: center;
     gap: 50px;
     margin: 50px;
 }
@@ -380,6 +381,7 @@ figcaption {
     .research-aim {
         flex-direction: column-reverse;
         align-items: center;
+        justify-content: flex-end;
         gap: 25px;
     }
 
