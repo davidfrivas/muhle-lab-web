@@ -540,6 +540,7 @@ sup {
 .funding-link {
     text-decoration: underline;
     color: #0000FF;
+    font-weight: bold;
 }
 
 .funding-link:hover {
