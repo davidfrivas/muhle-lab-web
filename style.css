@@ -359,10 +359,6 @@ figcaption {
     justify-content: center;
 }
 
-.research-aim.even {
-    flex-direction: row-reverse;
-}
-
 @media screen and (max-width: 1070px) {
     .research-aim {
         flex-wrap: wrap;
