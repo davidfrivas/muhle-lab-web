@@ -328,8 +328,6 @@ hr {
     margin: 75px 100px;
 }
 
-
-
 figure {
     margin: 0px;
 }
@@ -359,6 +357,12 @@ figcaption {
     gap: 50px;
     margin: 50px;
     justify-content: center;
+}
+
+sup { 
+    line-height: 0;
+    vertical-align: super 
+    font-size: 0.6em;
 }
 
 .chd8-ihc-gif {
