@@ -363,12 +363,17 @@ figcaption {
 
 .chd8-ihc-gif {
     width: 300px;
-    height: 300px;
+    height: fit-content;
+}
+
+.research-aim .chd8-ihc-gif img {
+    width: 300px;
+    height: auto;
 }
 
 .chd8-tag,
 .chd8-hnsc {
-    max-width: 400px;
+    width: 400px;
     height: auto;
 }
 
