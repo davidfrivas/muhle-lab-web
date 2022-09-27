@@ -334,6 +334,7 @@ figure {
 
 figcaption {
     font-size: 14px;
+    width: fit-content;
 }
 
 .hchd8-dnm-diagram {
@@ -358,6 +359,20 @@ figcaption {
     justify-content: center;
 }
 
+@media screen and (max-width: 1070px) {
+    .research-aim {
+        flex-wrap: wrap;
+    }
+
+    .chd8-ihc-gif {
+        justify-self: flex-start;
+    }
+}
+
+.research-aim-text {
+    width: fit-content;
+}
+
 sup { 
     line-height: 0;
     vertical-align: super 
@@ -365,7 +380,7 @@ sup {
 }
 
 .chd8-ihc-gif {
-    width: 300px;
+    max-width: 300px;
     height: fit-content;
 }
 
@@ -377,7 +392,14 @@ sup {
 .chd8-tag,
 .chd8-hnsc,
 .straub-tail {
-    width: 400px;
+    max-width: 400px;
+    height: auto;
+}
+
+.chd8-tag img,
+.chd8-hnsc img,
+.straub-tail img {
+    width: 100%;
     height: auto;
 }
 
