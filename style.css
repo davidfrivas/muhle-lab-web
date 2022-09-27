@@ -381,7 +381,7 @@ figcaption {
 }
 sup { 
     line-height: 0;
-    vertical-align: super 
+    vertical-align: super; 
     font-size: 0.6em;
 }
 
