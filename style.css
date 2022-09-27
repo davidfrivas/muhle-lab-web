@@ -370,7 +370,6 @@ figcaption {
     display: flex;
     gap: 50px;
     margin: 50px;
-    justify-content: center;
 }
 
 .research-aim-text p {
