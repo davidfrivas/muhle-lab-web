@@ -383,6 +383,10 @@ figcaption {
         flex-direction: column-reverse;
         align-items: center;
     }
+
+    .research-aim-text p {
+        margin-bottom: 25px;
+    }
 }
 
 sup { 
