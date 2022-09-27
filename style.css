@@ -359,18 +359,28 @@ figcaption {
     justify-content: center;
 }
 
+.research-aim.even {
+    flex-direction: row-reverse;
+}
+
 @media screen and (max-width: 1070px) {
     .research-aim {
         flex-wrap: wrap;
     }
 
-    .chd8-ihc-gif {
-        justify-self: flex-start;
+    .research-aim.gif {
+        flex-wrap: nowrap;
+    }
+
+    .straub-tail {
+        min-width: 100%;
     }
 }
 
-.research-aim-text {
-    width: fit-content;
+@media screen and (max-width: 900px) {
+    .research-aim.gif {
+        flex-wrap: wrap;
+    }
 }
 
 sup { 
@@ -394,6 +404,10 @@ sup {
 .straub-tail {
     max-width: 400px;
     height: auto;
+}
+
+.straub-tail {
+    min-width: 400px;
 }
 
 .chd8-tag img,
