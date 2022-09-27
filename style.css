@@ -533,6 +533,10 @@ sup {
     margin: 50px 150px;
 }
 
+.funding-source h3 {
+    font-size: 32px;
+}
+
 .funding-link {
     text-decoration: underline;
     color: #0000FF;
