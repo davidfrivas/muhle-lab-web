@@ -328,14 +328,7 @@ hr {
     margin: 75px 100px;
 }
 
-.research-overview {
-    display: flex;
-    gap: 50px;
-}
 
-.research-overview figure {
-    margin-top: 16px;
-}
 
 figure {
     margin: 0px;
@@ -352,7 +345,8 @@ figcaption {
 }
 
 .chd8-histone {
-    max-width: 300px;
+    float: right;
+    width: 300px;
     height: auto;
 }
 
@@ -364,11 +358,18 @@ figcaption {
     display: flex;
     gap: 50px;
     margin: 50px;
+    justify-content: center;
 }
 
 .chd8-ihc-gif {
     width: 300px;
     height: 300px;
+}
+
+.chd8-tag,
+.chd8-hnsc {
+    max-width: 400px;
+    height: auto;
 }
 
 /* CSS for news.html */
