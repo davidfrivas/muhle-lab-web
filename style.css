@@ -337,9 +337,14 @@ figcaption {
     width: fit-content;
 }
 
-.hchd8-dnm-diagram {
+.hchd8-dnm-diagram,
+.chd8-hnsc {
     width: 100%;
     height: auto;
+}
+
+.hchd8-dnm-diagram {
+    margin-bottom: 25px;
 }
 
 .chd8-histone {
@@ -349,7 +354,8 @@ figcaption {
 }
 
 .hr-research {
-    margin: 50px 0px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .research-aim {
@@ -385,13 +391,13 @@ sup {
 }
 
 .chd8-tag,
-.chd8-hnsc,
 .straub-tail {
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: 500px;
     height: auto;
 }
 
+.hchd8-dnm-diagram img,
 .chd8-tag img,
 .chd8-hnsc img,
 .straub-tail img {
