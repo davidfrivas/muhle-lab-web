@@ -402,9 +402,15 @@ sup {
     height: auto;
 }
 
+.chd8-hnsc {
+    min-width: 300px;
+    max-width: 400px;
+}
+
 .hchd8-dnm-diagram img,
 .chd8-tag img,
 .chip-seq img,
+.chd8-hnsc img,
 .straub-tail img {
     width: 100%;
     height: auto;
