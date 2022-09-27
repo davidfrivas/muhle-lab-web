@@ -338,13 +338,13 @@ figcaption {
 }
 
 .hchd8-dnm-diagram,
-.chd8-hnsc {
+.chip-seq {
     width: 100%;
     height: auto;
 }
 
 .hchd8-dnm-diagram img,
-.chd8-hnsc img {
+.chip-seq img {
     border: 0.5px solid black;
 }
 
@@ -404,7 +404,7 @@ sup {
 
 .hchd8-dnm-diagram img,
 .chd8-tag img,
-.chd8-hnsc img,
+.chip-seq img,
 .straub-tail img {
     width: 100%;
     height: auto;
