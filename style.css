@@ -380,6 +380,7 @@ figcaption {
     .research-aim {
         flex-direction: column-reverse;
         align-items: center;
+        gap: 25px;
     }
 
     .research-aim-text p {
