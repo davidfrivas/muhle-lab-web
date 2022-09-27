@@ -324,6 +324,18 @@ hr {
     background-size: contain;
 }
 
+.research.wrapper {
+    margin: 75px 100px;
+}
+
+.research-overview {
+    display: flex;
+    gap: 50px;
+}
+
+.research-overview figure {
+    margin-top: 16px;
+}
 
 figure {
     margin: 0px;
@@ -336,38 +348,27 @@ figcaption {
 .hchd8-dnm-diagram {
     width: 100%;
     height: auto;
-    border: 1px solid #737373;
+    border: 1px solid rgb(0 0 0 / 13%);
 }
 
-.fig2-fig3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.derubeis-nature-2014 {
-    width: 450px;
+.chd8-histone {
+    max-width: 300px;
     height: auto;
-}
-
-.asd-risk-network, .chd8-target-genes {
-    width: 300px;
-    height: auto;
-}
-
-.figure-2 {
-    max-width: 450px;
-}
-
-.figure-3, .figure-4 {
-    display: flex;
-    align-items: center;
-    max-width: 560px;
 }
 
 .hr-research {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 25px 0px;
+}
+
+.research-aim {
+    display: flex;
+    gap: 50px;
+    margin: 50px;
+}
+
+.chd8-ihc-gif {
+    width: 300px;
+    height: 300px;
 }
 
 /* CSS for news.html */
