@@ -359,6 +359,7 @@ figcaption {
     float: right;
     width: 400px;
     height: auto;
+    margin-left: 25px;
 }
 
 .hr-research {
