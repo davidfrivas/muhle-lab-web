@@ -226,7 +226,7 @@ p {
     flex-direction: row-reverse;
 }
 
-.even img {
+.lab-member.even img {
     align-self: flex-end;
 }
 
