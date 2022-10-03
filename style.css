@@ -374,6 +374,10 @@ figcaption {
     margin: 50px;
 }
 
+.research-aim.reverse {
+    flex-direction: row-reverse;
+}
+
 .research-aim-text p {
     margin-bottom: 0px;
 }
