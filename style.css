@@ -389,7 +389,8 @@ figcaption {
 }
 
 @media screen and (max-width: 1070px) {
-    .research-aim {
+    .research-aim,
+    .research-aim.reverse {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-end;
