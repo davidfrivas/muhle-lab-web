@@ -632,6 +632,10 @@ sup {
 
 /* CSS for contact.html */
 
+.contact.wrapper {
+    margin: 75px 100px;
+}
+
 .lab-banner.contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/sackler.jpeg");
     background-position: top center;
@@ -639,21 +643,66 @@ sup {
 
 .contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 0px;
-    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    width: 90%;
+    padding: 0px 50px;
+}
+
+label {
+    display: block;
+    margin: 20px 0px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+.contact-form form button {
+    margin-top: 30px;
+    margin: 30px auto 0px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #1E1926;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #9A89B4;
+    
 }
 
 .contact-text {
+    max-width: 400px;
+}
+
+.hr-contact {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.location {
     display: flex;
-}
-
-.contact-text hr {
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.join {
-    max-width: 300px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
