@@ -362,6 +362,20 @@ figcaption {
     margin-left: 25px;
 }
 
+.asd-risk-network {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 860px) {
+    .asd-risk-network {
+        margin-bottom: 0px;
+    }
+}
+
 .hr-research {
     width: 100%;
     margin: 50px auto;
