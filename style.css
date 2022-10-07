@@ -377,15 +377,14 @@ figcaption {
     margin-bottom: 25px;
 }
 
-.chd8-histone-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-
+.chd8-histone-container p {
+    margin-bottom: 50px;
 }
 
-.chd8-histone-container p {
-    margin-bottom: 12.5px;
+@media screen and (max-width: 1565px) {
+    .chd8-histone-container p {
+        margin-bottom: 0px;
+    }
 }
 
 .chd8-histone {
