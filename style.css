@@ -365,6 +365,7 @@ figcaption {
     max-width: 80%;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .hchd8-dnm-diagram img,
