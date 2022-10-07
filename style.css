@@ -394,6 +394,11 @@ figcaption {
     margin-left: 25px;
 }
 
+.asd-risk-network-container {
+    display: flex;
+    align-items: center;
+}
+
 .asd-risk-network {
     float: left;
     width: 350px;
