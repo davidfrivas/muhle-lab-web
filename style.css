@@ -383,6 +383,10 @@ figcaption {
 
 }
 
+.chd8-histone-container p {
+    margin-bottom: 12.5px;
+}
+
 .chd8-histone {
     float: right;
     width: 400px;
