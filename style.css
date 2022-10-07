@@ -348,6 +348,10 @@ hr {
     margin: 75px 125px;
 }
 
+.research.wrapper p {
+    font-size: 18px;
+}
+
 .research-overview p {
     margin-bottom: 25px;
 }
