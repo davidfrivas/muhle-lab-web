@@ -416,12 +416,6 @@ figcaption {
     margin-bottom: 0px;
 }
 
-.research-aim.chip {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 @media screen and (max-width: 1070px) {
     .research-aim,
     .research-aim.reverse {
