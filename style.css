@@ -148,6 +148,7 @@ a {
 .mission-statement {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 150px 200px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/gwb.jpg");
