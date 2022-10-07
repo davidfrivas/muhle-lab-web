@@ -595,16 +595,12 @@ sup {
     background-position: top;
 }
 
-.funding-source.top {
-    margin-top: 58px;
-}
-
-.funding-source.bottom {
-    margin-bottom: 58px;
+.wrapper.funding {
+    margin: 75px auto;
 }
 
 .funding-source {
-    margin: 50px 150px;
+    margin: 50px 200px;
 }
 
 .funding-source h3 {
@@ -628,8 +624,8 @@ sup {
 }
 
 .hr-funding {
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 /* CSS for contact.html */
