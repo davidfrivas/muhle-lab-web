@@ -376,6 +376,13 @@ figcaption {
     margin-bottom: 25px;
 }
 
+.chd8-histone-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
 .chd8-histone {
     float: right;
     width: 400px;
