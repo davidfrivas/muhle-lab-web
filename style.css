@@ -752,8 +752,4 @@ iframe {
         height: fit-content;
         min-width: 500px;
     }
-
-    .location-text h2 {
-        margin-bottom: 0px;
-    }
 }
