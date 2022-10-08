@@ -158,12 +158,13 @@ a {
 }
 
 .mission-text {
-    max-width: 1500px;
+    max-width: 900px;
 }
 
 .mission-text h2 {
     margin-bottom: 50px;
     font-weight: 700;
+    max-width: 800px;
 }
 
 .mission-statement p {
