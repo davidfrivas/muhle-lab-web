@@ -386,6 +386,7 @@ figcaption {
     width: 350px;
     height: auto;
     margin-right: 25px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 860px) {
@@ -397,6 +398,10 @@ figcaption {
 .hr-research {
     width: 100%;
     margin: 50px auto;
+}
+
+.hr-research.top {
+    margin-top: 50px;
 }
 
 .research-aim {
