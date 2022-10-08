@@ -502,21 +502,6 @@ sup {
     margin: 75px 50px;
 }
 
-.latest-news p {
-    color: #0000FF;
-    font-weight: 600;
-    text-align: end;
-    margin-right: 25px;
-}
-
-.latest-news p a:after {
-    content: ">";
-}
-
-.latest-news p a:hover {
-    color: #2C6676;
-}
-
 .latest-news-title {
     font-size: 36px;
     text-transform: uppercase;
