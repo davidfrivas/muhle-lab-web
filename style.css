@@ -360,8 +360,7 @@ figcaption {
 .chip-seq {
     max-width: 80%;
     height: auto;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 50px auto;
 }
 
 .chd8-histone-container p {
