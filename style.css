@@ -498,8 +498,6 @@ sup {
 }
 
 .latest-news-title {
-    margin-left: 25px;
-    margin-bottom: 25px;
     font-size: 36px;
     text-transform: uppercase;
     grid-row: 1;
