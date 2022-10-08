@@ -513,7 +513,7 @@ sup {
 .news-boxes {
     display: grid;
     grid-template-columns: repeat(auto-fill, 500px);
-    grid-gap: 50px;
+    grid-gap: 75px;
     justify-content: center;
 }
 
