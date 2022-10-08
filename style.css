@@ -151,7 +151,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 150px 200px;
-    background-image: linear-gradient(rgb(0 27 93 / 73%), rgba(0, 0, 0, 0.6)), url("./images/gwb.jpg");
+    background-image: linear-gradient(rgb(0 22 75 / 73%), rgba(0, 0, 0, 0.6)), url("./images/gwb.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -393,7 +393,7 @@ figcaption {
     .asd-risk-network {
         margin-bottom: 0px;
     }
-    
+
     .hr-research.top {
     margin-top: 50px;
 }
