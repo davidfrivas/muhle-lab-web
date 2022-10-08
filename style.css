@@ -278,14 +278,9 @@ ion-icon {
     color: #9A89B4;
 }
 
-.david-rivas,
-.mahdia-begum,
-.rebecca-muhle,
-.sam-dhanani,
-.esti,
-.hannah-kim {
-    width: auto;
-    height: 600px;
+.lab-member img {
+    width: 420px;
+    height: auto;
 }
 
 hr {
