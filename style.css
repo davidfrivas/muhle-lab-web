@@ -151,7 +151,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 150px 200px;
-    background-image: linear-gradient(rgb(24 36 65 / 95%), rgb(0 0 0 / 50%)), url("./images/gwb.jpg");
+    background-image: linear-gradient(rgb(9 26 59 / 95%), rgb(0 0 0 / 51%)), url(./images/gwb.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
