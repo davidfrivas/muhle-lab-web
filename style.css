@@ -501,6 +501,7 @@ sup {
     margin-left: 25px;
     margin-bottom: 25px;
     font-size: 36px;
+    text-transform: uppercase;
 }
 
 .news-boxes {
