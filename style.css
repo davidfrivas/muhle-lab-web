@@ -386,7 +386,6 @@ figcaption {
     width: 350px;
     height: auto;
     margin-right: 25px;
-    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 860px) {
