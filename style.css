@@ -722,7 +722,38 @@ textarea {
 .location {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+}
+
+#map {
+    min-width: 500px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.location-text {
+    box-sizing: border-box;
+    background-color: #1E1926;
+    color: white;
+    width: 350px;
+    height: 350px;
+    padding: 25px;
+}
+
+.location-text h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1049px) {
+    .location-text {
+        height: fit-content;
+        min-width: 500px;
+    }
+
+    .location-text h2 {
+        margin-bottom: 0px;
+    }
 }
