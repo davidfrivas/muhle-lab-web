@@ -148,6 +148,10 @@ body {
         padding-right: 4px;
         visibility: initial;
     }
+
+    .navbar.news-post .header-link {
+        color: white;
+    }
 }
 
 .navbar .header-link {
@@ -665,7 +669,7 @@ sup {
 
 /* CSS for news posts */
 
-.news-post {
+.lab-banner.news-post {
     background-image: none;
     color: black;
 }
