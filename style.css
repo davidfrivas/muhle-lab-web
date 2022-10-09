@@ -240,6 +240,14 @@ a {
     text-align: center;
 }
 
+.banner-content .banner-home-title {
+    font-weight: bold;
+}
+
+.banner-content h1 {
+    font-weight: 400;
+}
+
 .banner-content .dept {
     font-size: 18px;
     padding: 16px;
