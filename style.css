@@ -434,6 +434,10 @@ hr {
     text-align: center;
 }
 
+.team-alumni h1 {
+    font-weight: 400;
+}
+
 .team-alumni-link:hover .team-alumni {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/lab-pic-2021.JPG");
 }
