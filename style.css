@@ -379,6 +379,10 @@ p {
     align-self: center;
 }
 
+.member-summary h2 {
+    margin-bottom: 18px;
+}
+
 .member-summary p {
     font-size: 18px;
 }
