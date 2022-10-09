@@ -14,14 +14,14 @@ navToggle.addEventListener("click", () => {
 });
 
 const dropdownButton = document.querySelector(".dropdown-button");
-const dropdown = document.querySelector(".dropdown-content");
+const dropdownContent = document.querySelector(".dropdown-content");
 
 dropdownButton.addEventListener("click", () => {
-    const dropdownVisibility = dropdown.getAttribute("menu-visible")
+    const dropdownVisibility = dropdownContent.getAttribute("menu-visible")
     
     if (dropdownVisibility === "false") {
-        dropdown.setAttribute("menu-visible", true);
+        dropdownContent.setAttribute("menu-visible", true);
     } else if (dropdownVisibility === "true") {
-        dropdown.setAttribute("menu-visible", false);
+        dropdownContent.setAttribute("menu-visible", false);
     }
 })
