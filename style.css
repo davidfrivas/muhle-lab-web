@@ -408,7 +408,7 @@ ion-icon {
 }
 
 .lab-member img {
-    width: 420px;
+    max-width: 420px;
     height: auto;
 }
 
