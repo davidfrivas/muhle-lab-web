@@ -11,12 +11,13 @@
             <div class="lab-banner contact">
                 <div class="header">
                     <div class="logo"><a href="../index.html" title="Home"><strong>Muhle</strong> Lab</a></div>
-                    <div class="navbar">
+                    <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><span class="sr-only">Menu</span></button>
+                    <div class="navbar" data-visible="false">
                         <a class="header-link"
                         href=".././index.html">Home</a>
                         <div class="dropdown">
-                            <a class="header-link" href="./team.html">Team</a>
-                            <div class="dropdown-content">
+                            <span class="header-link dropdown-button">Team</span>
+                            <div class="dropdown-content" menu-visible="false">
                                 <a class="header-link" href="./team.html">Members</a>
                                 <a class="header-link" href="./alumni.html">Alumni</a>
                             </div>
