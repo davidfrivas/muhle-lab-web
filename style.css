@@ -631,13 +631,9 @@ sup {
 
 .news-boxes {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
-    grid-gap: 75px;
-    justify-content: center;
-}
-
-.news-box {
-    width: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 50px;
+    justify-items: center;
 }
 
 .news-date {
@@ -654,11 +650,10 @@ sup {
     font-size: 18px;
 }
 
-.news-img {
-    float: left;
+.news-box .news-img {  
+    width: 100%;
+    aspect-ratio: 3 / 1.75;
     object-fit: cover;
-    width: 500px;
-    height: 300px;
     margin-bottom: 10px;
 }
 
