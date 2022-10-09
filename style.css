@@ -612,7 +612,6 @@ sup {
 
 .latest-news-title {
     font-size: 36px;
-    text-transform: uppercase;
     grid-row: 1;
     grid-column: 1/-1;
     justify-self: flex-start;
