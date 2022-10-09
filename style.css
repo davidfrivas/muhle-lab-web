@@ -473,6 +473,10 @@ hr {
     margin: 75px 125px;
 }
 
+.research.wrapper h2 {
+    margin-bottom: 50px;
+}
+
 .research.wrapper p {
     font-size: 18px;
 }
