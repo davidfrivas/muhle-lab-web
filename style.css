@@ -680,7 +680,7 @@ sup {
     aspect-ratio: 3 / 1.75;
     object-fit: cover;
     margin-bottom: 10px;
-    min-height: 233.33px;
+    height: auto;
 }
 
 .news-img.columbia {
