@@ -420,6 +420,7 @@ ion-icon {
 
 .linkedin:hover {
     color: #2C6676;
+    transition: color 200ms ease-in-out;
 }
 
 .github {
@@ -428,6 +429,7 @@ ion-icon {
 
 .github:hover {
     color: #9A89B4;
+    transition: color 200ms ease-in-out;
 }
 
 .lab-member img {
@@ -773,6 +775,7 @@ sup {
 
 .funding-link:hover {
     color: #2C6676;
+    transition: color 200ms ease-in-out;
 }
 
 .funding-logo {
