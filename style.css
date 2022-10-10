@@ -479,15 +479,15 @@ hr {
     background-size: contain;
 }
 
-.research.wrapper {
+.research-wrapper {
     margin: 75px 125px;
 }
 
-.research.wrapper h2 {
+.research-wrapper h2 {
     margin-bottom: 50px;
 }
 
-.research.wrapper p {
+.research-wrapper p {
     font-size: 18px;
 }
 
@@ -737,7 +737,7 @@ sup {
     background-position: top;
 }
 
-.wrapper.funding {
+.funding-wrapper {
     margin: 75px auto;
 }
 
@@ -771,7 +771,7 @@ sup {
 
 /* CSS for contact.html */
 
-.contact.wrapper {
+.contact-wrapper {
     margin: 75px 100px;
 }
 
