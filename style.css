@@ -167,6 +167,18 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .navbar {
+        inset: 0 0 0 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        inset: 0 0 0 0%;
+    }
+}
+
 .navbar .header-link {
     font-size: 14px;
     font-weight: 400;
