@@ -64,8 +64,10 @@ body {
     transform: translateX(0%);
 }
 
-.mobile-nav-toggle {
+.header .mobile-nav-toggle {
     display: none;
+    color: #9A89B4;
+    font-size: 32px;
 }
 
 .sr-only {
@@ -102,15 +104,11 @@ body {
         padding-bottom: 8px;
     }
 
-    .mobile-nav-toggle {
+    .header .mobile-nav-toggle {
         display: block;
-        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
         cursor: pointer;
         position: fixed;
         z-index: 9999;
-        background: url(./icons/Hamburger_icon_white.svg);
-        background-repeat: no-repeat;
-        background-position: center;
         border: 0;
         width: 2rem;
         aspect-ratio: 1;
