@@ -325,6 +325,7 @@ a {
 .mission-statement button:hover {
     color: black;
     background-color: white;
+    transition: 200ms ease-in-out;
 }
 
 .news-boxes button {
@@ -346,6 +347,7 @@ a {
     border: 1px solid black;
     color: white;
     background: black;
+    transition: 200ms ease-in-out;
 }
 
 h1,
