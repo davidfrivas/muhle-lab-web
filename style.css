@@ -695,6 +695,14 @@ sup {
     color: black;
 }
 
+.lab-banner.news-post .dropdown-content .header-link {
+    color: white;
+}
+
+.lab-banner.news-post .dropdown-content .header-link:hover {
+    color: #9A89B4;
+}
+
 .news-post-hr {
     margin-left: 0px;
     margin-right: 0px;
