@@ -734,6 +734,10 @@ sup {
     margin-bottom: 25px;
 }
 
+.blog-post-thumbnail.columbia {
+    background-color: #FDF7FF;
+}
+
 .swiper {
     margin-top: 50px;
     width: 40em;
