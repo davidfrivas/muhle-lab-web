@@ -728,10 +728,6 @@ sup {
     margin: 0 auto;
 }
 
-.blog-post-entry p {
-    margin-bottom: 50px;
-}
-
 .blog-post-thumbnail {
     width: 100%;
     height: auto;
@@ -739,6 +735,7 @@ sup {
 }
 
 .swiper {
+    margin-top: 50px;
     width: 40em;
     height: 40em;
 }
