@@ -713,7 +713,6 @@ sup {
     margin: 100px;
 }
 
-
 .news-blog-post h3 {
     font-size: 18px;
     color: #208CA7;
@@ -757,6 +756,14 @@ sup {
 
 .swiper .swiper-pagination-bullet-active {
     background: white;
+}
+
+.blog-link {
+    color: #0000FF;
+}
+
+.blog-link:hover {
+    color: #208CA7;
 }
 
 /* CSS for funding.html */
