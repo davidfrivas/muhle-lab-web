@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>2022 SRI Poster Session | Muhle Lab</title>
+        <link rel="icon" type="image/x-icon" href="../../icons/favicon.png">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="../../nav.js" defer></script>
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="lab-banner news-post">
+                <div class="header">
+                    <div class="logo"><a href="../../index.html" title="Home"><strong>Muhle</strong> Lab</a></div>
+                    <i class="fa fa-bars mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><span class="sr-only">Menu</span></i>                    <div class="navbar news-post" data-visible="false">
+                        <a class="header-link"
+                        href="../../index.html">Home</a>
+                        <div class="dropdown">
+                            <span class="header-link dropdown-button">Team</span>
+                            <div class="dropdown-content" menu-visible="false">
+                                <a class="header-link" href=".././team.html">Members</a>
+                                <a class="header-link" href=".././alumni.html">Alumni</a>
+                            </div>
+                        </div>
+                        <a class="header-link"
+                        href=".././research.html">Research</a>
+                        <a class="header-link current-page" href=".././news.html">News</a>
+                        <a class="header-link"
+                        href=".././funding.html">Funding</a>
+                        <a class="header-link"
+                        href=".././contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="news-post-hr">
+            
+            <div class="wrapper">
+                <div class="news-blog-post">
+                    <h3>13 September 2022</h3>
+                    <h2>Dr. Muhle Attends WCPG in Florence</h2>
+                    <div class="blog-post-entry">
+                        <img class="blog-post-thumbnail"
+                        src="../../images/florence.jpg" alt="photo of Florence,
+                       Italy">
+                        <p>Dr. Muhle attends the 2022 World Congress of Psychiatric
+                        Genetics (WCPG) in Florence, Italy. WCPG is hosted
+                        annually by the International Society of Psychiatric
+                        Genetics (ISPG). <a class="blog-link" href="https://ispg.net/about-us/">The ISPG</a>, established in 1992, <i>'...is a collaboration of physicians, researchers, geneticists, social workers, genetic counselors, students, or any professionals with interest in the field of psychiatric genetics.'</i></p>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                    src="../../images/rebecca-wcpg-2022.jpg"
+                                    alt="Rebecca at WCPG 2022">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    src="../../images/rebecca-wcpg-2022-poster.jpg"
+                                    alt="Rebecca presenting her poster at WCPG 2022">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/florence-dish1.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/florence-dish2.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/florence-dish3.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/florence-dish4.jpg">
+                                </div>
+                            </div>  
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="footer">
+                <div class="wrapper">
+                    <div class="logo"><strong>Muhle</strong> Lab</div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            New York State Psychiatric Institute<br>
+                            Columbia University Department of Psychiatry<br>
+                        </p>
+                    </div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            Herbert Pardes Building, Room 4935<br>
+                            1051 Riverside Dr<br>
+                            New York, NY 10032<br>
+                        </p>
+                    </div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            Copyright &copy; <script>document.write(new Date().getFullYear())</script> Muhle Lab
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+        </script>
+    </body>
+</html>
