@@ -864,7 +864,7 @@ textarea {
 
 .contact-form form button:hover {
     background-color: #9A89B4;
-    
+    transition: background-color 300ms ease-in-out;
 }
 
 .contact-text {
