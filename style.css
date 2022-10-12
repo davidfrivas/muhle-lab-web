@@ -166,6 +166,10 @@ body {
     .navbar.news-post .header-link {
         color: white;
     }
+
+    .navbar.news-post .header-link.current-page {
+        color: #9A89B4;
+    }
 }
 
 @media (max-width: 600px) {
