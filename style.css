@@ -914,3 +914,40 @@ iframe {
         min-width: 500px;
     }
 }
+
+/* CSS for contact.html */
+
+.error-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 75px;
+}
+
+.error-404 h2 {
+    font-size: 36px;
+}
+
+.error-404 button {
+    margin: 75px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    color: black;
+    background: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.error-404 button:hover {
+    color: white;
+    background-color: black;
+    transition: 200ms ease-in-out;
+}
+
+.error-404 hr {
+    width: 100%;
+    margin: 0px;
+}
