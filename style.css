@@ -1129,7 +1129,7 @@ iframe {
     font-size: var(--fs-300);
 }
 
-@media screen and (max-width: 944px) {
+@media screen and (max-width: 777px) {
     .location-text {
         height: fit-content;
         min-width: 350px;
