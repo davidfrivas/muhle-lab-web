@@ -1130,7 +1130,7 @@ iframe {
 }
 
 @media screen and (max-width: 777px) {
-    .location-text {
+    .location .location-text {
         height: fit-content;
         min-width: 350px;
     }
