@@ -1111,7 +1111,7 @@ iframe {
     width: 100%;
 }
 
-.location-text {
+.location .location-text {
     box-sizing: border-box;
     background-color: #1E1926;
     color: white;
