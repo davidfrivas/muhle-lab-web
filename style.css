@@ -6,7 +6,63 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
+/* Font size */
+
+:root {
+    --fs-xl: 3.25rem;
+    --fs-600: 3rem;
+    --fs-550: 2.3rem;
+    --fs-500: 1.9rem;
+    --fs-450: 1.3rem;
+    --fs-400: 1rem;
+    --fs-300: 0.75rem;
+}
+
+body {
+    font-size: var(--fs-400);
+}
+
+@media (max-width: 20.625em) {
+    :root {
+        --fs-xl: 2.9rem;
+        --fs-600: 3rem;
+        --fs-550: 2.3rem;
+        --fs-500: 1.9rem;
+        --fs-450: 1.3rem;
+        --fs-400: 1rem;
+        --fs-300: 0.7rem;
+    }
+}
+
+@media (min-width: 40em) {
+    :root {
+        --fs-xl: 5rem;
+        --fs-600: 3.5rem;
+        --fs-550: 2.75rem;
+        --fs-500: 2.25rem;
+        --fs-450: 1.75rem;
+        --fs-400: 1.2rem;
+        --fs-300: 1rem;
+    }
+}
+
+@media (min-width: 71.875em) {
+    :root {
+        --fs-xl: 6rem;
+        --fs-600: 4rem;
+        --fs-550: 3.25rem;
+        --fs-500: 3rem;
+        --fs-450: 2rem;
+        --fs-400: 1.25rem;
+        --fs-300: 1rem;
+    }
+}
+
 /* General webpage structure */
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -26,9 +82,12 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
-    width: 100%;
+    width: min(90%, 75rem);
     margin: 0 auto;
+}
+
+.wrapper.page-content {
+    padding-block: min(10vh, 6.25rem);
 }
 
 /* General webpage banner */
@@ -36,10 +95,77 @@ body {
 .lab-banner {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("./images/lab-pic-2022.jpg");
-    background-size: cover;
-    background-position: center 87%;
     color: #fff;
+}
+
+.lab-banner.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("./images/lab-pic-2022.jpg");
+    background-size: 475%;
+    background-position: 68% bottom;
+}
+
+@media (min-width: 23.125em) {
+    .lab-banner.home {
+        background-size: 400%;
+    }
+}
+
+@media (min-width: 27.5em) {
+    .lab-banner.home {
+        background-size: 320%;
+    }
+}
+
+@media (min-width: 33.75em) {
+    .lab-banner.home {
+        background-size: 250%;
+    }
+}
+
+@media (min-width: 40em) {
+    .lab-banner.home {
+        background-size: 245%;
+    }
+}
+
+@media (min-width: 46.875em) {
+    .lab-banner.home {
+        background-size: 215%;
+    }
+}
+
+@media (min-width: 54.6875em) {
+    .lab-banner.home {
+        background-size: 180%;
+    }
+}
+
+@media (min-width: 59.375em) {
+    .lab-banner.home {
+        background-size: 145%;
+    }
+}
+
+@media (min-width: 71.875em) {
+    .lab-banner.home {
+        background-size: 130%;
+    }
+}
+
+@media (min-width: 87.5em) {
+    .lab-banner.home {
+        background-size: 110%;
+    }
+}
+
+.page-title {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+}
+
+.banner-content {
+    padding-block: 6.25rem;
 }
 
 /* Navbar */
@@ -51,9 +177,10 @@ body {
 }
 
 .logo {
-    font-size: 36px;
+    font-size: var(--fs-500);
     text-transform: lowercase;
-    margin: 25px 50px;
+    font-weight: 300;
+    margin: 2rem;
 }
 
 .navbar {
@@ -179,7 +306,7 @@ body {
 }
 
 .navbar .header-link {
-    font-size: 14px;
+    font-size: var(--fs-300);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -240,16 +367,17 @@ a {
 .footer {
     background-color: #1E1926;
     color: white;
-    padding: 50px;
+    padding-block: min(10vh, 6.25rem);
 }
 
 .footer .logo {
-    margin: 0 0 25px 0;
+    margin: 0 0 1.56rem 0;
 }
 
 .footer-address {
     display: flex;
     align-items: center;
+    font-size: var(--fs-300);
 }
 
 .footer-address hr {
@@ -264,59 +392,82 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     text-align: center;
 }
 
-.banner-content .banner-home-title {
-    font-weight: bold;
+.banner-content.home {
+    padding-block: min(20vh, 9.4rem);
 }
 
-.banner-content h1 {
-    font-weight: 400;
+.banner-content .home-title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+}
+
+.banner-content .welcome {
+    font-size: var(--fs-300);
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: left;
+}
+
+.banner-content .mgn {
+    font-size: var(--fs-300);
+    font-weight: 350;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .banner-content .dept {
-    font-size: 18px;
-    padding: 16px;
+    font-size: var(--fs-300);
 }
 
 .mission-statement {
+    padding-block: min(10vh, 6.25rem);
+    background-image: linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(./images/gwb.jpg);
+    background-size: cover;
+    background-position: 35% center;
+    color: #fff;
+}
+
+@media (min-width: 40em) {
+    .mission-statement {
+        background-position: center;
+    }
+}
+
+.mission-statement .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px;
-    background-image: linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(./images/gwb.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #fff;
 }
 
 .mission-text {
-    max-width: 900px;
+    max-width: 40rem;
 }
 
 .mission-text h2 {
-    margin-bottom: 50px;
+    font-size: var(--fs-500);
     font-weight: 700;
-    max-width: 800px;
 }
 
-.mission-statement p {
-    font-size: 24px;
+.mission-text p {
+    font-size: var(--fs-400);
     font-weight: 300;
+    margin-block: min(20vh, 3.125rem);
 }
 
 .mission-statement button {
-    margin-top: 50px;
-    padding: 10px 15px;
+    padding: 0.625em 0.9375em;
     border: 1px solid white;
     color: white;
     background: none;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 18px;
+    font-size: var(--fs-400);
     cursor: pointer;
 }
 
@@ -326,15 +477,18 @@ a {
     transition: 200ms ease-in-out;
 }
 
+.latest-news.home {
+    padding-block: min(10vh, 6.25rem);
+}
+
 .news-boxes button {
-    padding: 10px 15px;
-    margin-top: 25px;
+    padding: 0.625em 0.9375em;
     border: 1px solid black;
     color: black;
     background: none;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 18px;
+    font-size: var(--fs-400);
     cursor: pointer;
     grid-column: 1/-1;
     width: fit-content;
@@ -354,20 +508,6 @@ h3 {
     margin: 0px;
 }
 
-h1 {
-    font-size: 82px;
-    text-transform: uppercase;
-    margin: 70px;
-}
-
-h2 {
-    font-size: 48px;
-} 
-
-h3 {
-    font-size: 24px;
-}
-
 p {
     line-height: 1.8em;
 }
@@ -375,12 +515,46 @@ p {
 /* CSS for team.html page */
 
 .lab-banner.team {
-    background-position: center 70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("./images/lab-pic-2022.jpg");
+    background-size: 250%;
+    background-position: 68% bottom;
 }
 
-.team-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+@media (min-width: 28.125em) {
+    .lab-banner.team {
+        background-size: 200%;
+    }
+}
+
+@media (min-width: 34.375em) {
+    .lab-banner.team {
+        background-size: 160%;
+    }
+}
+
+@media (min-width: 48.4375em) {
+    .lab-banner.team {
+        background-size: 140%;
+    }
+}
+
+@media (min-width: 56.25em) {
+    .lab-banner.team {
+        background-size: 120%;
+    }
+}
+
+@media (min-width: 62.5em) {
+    .lab-banner.team {
+        background-size: 105%;
+    }
+}
+
+@media (min-width: 81.25em) {
+    .lab-banner.team {
+        background-size: 100%;
+        background-position: 68% 95%;
+    }
 }
 
 .lab-member {
@@ -388,7 +562,6 @@ p {
     flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    padding: 50px;
     gap: 50px;
 }
 
@@ -402,16 +575,20 @@ p {
 
 .member-summary {
     width: calc(50% - 5%);
-    min-width: 400px;
     align-self: center;
 }
 
 .member-summary h2 {
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
+    font-size: var(--fs-550);
+}
+
+.member-summary h3 {
+    font-size: var(--fs-450);
 }
 
 .member-summary p {
-    font-size: 18px;
+    font-size: var(--fs-400);
 }
 
 ion-icon {
@@ -437,22 +614,33 @@ ion-icon {
 }
 
 .lab-member img {
-    max-width: 420px;
+    max-width: min(90%, 400px);
     height: auto;
 }
 
+@media (max-width: 60.625em) {
+    .lab-member img {
+        width: 90%;
+    }
+
+    .member-summary {
+        width: 90%;
+    }
+
+    .member-summary h2,
+    .member-summary h3 {
+        text-align: center;
+    }
+}
+
+
 hr {
     border: 0.5px solid rgb(0, 0, 0);
-    margin-left: 68px;
-    margin-right: 68px;
 }
 
-.hr-top {
-    margin-top: 58px;
-}
-
-.hr-bottom {
-    margin-bottom: 58px;
+.page-break {
+    width: 100%;
+    margin-block: 2rem;
 }
 
 .team-alumni {
@@ -461,14 +649,16 @@ hr {
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/lab-pic-2021.JPG");
     background-size: cover;
-    background-position: center 40%;
+    background-position: center;
     color: #fff;
-    padding: 100px;
+    padding-block: 12rem;
     text-align: center;
 }
 
 .team-alumni h1 {
-    font-weight: 400;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
 }
 
 .team-alumni-link:hover .team-alumni {
@@ -479,19 +669,16 @@ hr {
 
 .lab-banner.alumni {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/lab-pic-2021.JPG");
-    background-position: center 30%;
+    background-position: center;
+    background-size: cover;
 }
 
-.lab-alumni {
-    margin: 50px 75px;
+.alumni-list-title {
+    font-size: var(--fs-550);
 }
 
 .alumni-list span {
     font-weight: bold;
-}
-
-.lab-alumni.bottom {
-    margin-bottom: 58px;
 }
 
 /*CSS for research.html */
@@ -502,20 +689,17 @@ hr {
     background-size: contain;
 }
 
-.research-wrapper {
-    margin: 75px 125px;
-}
-
-.research-wrapper h2 {
-    margin-bottom: 50px;
-}
-
-.research-wrapper p {
-    font-size: 18px;
+.research-heading {
+    font-size: var(--fs-550);
+    margin-bottom: 2rem;
 }
 
 .research-overview p {
     margin-bottom: 25px;
+}
+
+.research-aim-text h3 {
+    font-size: var(--fs-450);
 }
 
 figure {
@@ -523,12 +707,12 @@ figure {
 }
 
 figcaption {
-    font-size: 14px;
+    font-size: var(--fs-300);
 }
 
 .hchd8-dnm-diagram,
 .chip-seq {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     margin: 50px auto;
 }
@@ -550,12 +734,29 @@ figcaption {
     margin-left: 25px;
 }
 
+@media (max-width: 40em) {
+    .chd8-histone {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 .asd-risk-network {
     float: left;
     width: 350px;
     height: auto;
     margin-right: 25px;
     margin-bottom: 50px;
+}
+
+@media (max-width: 36.25em) {
+    .asd-risk-network {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -578,7 +779,6 @@ figcaption {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin: 50px;
 }
 
 .research-aim.reverse {
@@ -626,6 +826,14 @@ sup {
     height: auto;
 }
 
+@media (max-width: 31.25em) {
+    .chd8-tag,
+    .straub-tail,
+    .chd8-hnsc {
+        min-width: 100%;
+    }
+}
+
 .chd8-hnsc {
     min-width: 300px;
     max-width: 400px;
@@ -645,14 +853,11 @@ sup {
 .lab-banner.news {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("./images/ihc-brain.jpg");
     background-position: center 40%;
-}
-
-.latest-news {
-    margin: 50px;
+    background-size: cover;
 }
 
 .latest-news-title {
-    font-size: 36px;
+    font-size: var(--fs-500);
     grid-row: 1;
     grid-column: 1/-1;
     justify-self: flex-start;
@@ -661,12 +866,18 @@ sup {
 .news-boxes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 3.125rem;
     justify-items: center;
 }
 
+@media (max-width: 27.8125em) {
+    .news-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));
+    }
+}
+
 .news-date {
-    font-size: 12px;
+    font-size: var(--fs-300);
     color: #389CB7;
     margin-bottom: 10px;
 }
@@ -676,7 +887,7 @@ sup {
 }
 
 .news-box-title {
-    font-size: 18px;
+    font-size: var(--fs-400);
 }
 
 .news-box .news-img {  
@@ -708,34 +919,30 @@ sup {
 }
 
 .news-post-hr {
-    margin-left: 0px;
-    margin-right: 0px;
     border-color:rgb(0 0 0 / 13%);
 }
 
-.news-blog-post {
-    margin: 100px;
-}
-
 .news-blog-post h3 {
-    font-size: 18px;
+    font-size: var(--fs-450);
     color: #208CA7;
+    margin-bottom: 1rem;
 }
 
 .news-blog-post h2 {
-    font-size: 54px;
-    margin-bottom: 50px;
+    font-size: var(--fs-550);
+    margin-bottom: 2rem;
 }
 
 .blog-post-entry {
-    width: 40em;
+    max-width: 40em;
+    min-width: 100%;
     margin: 0 auto;
 }
 
 .blog-post-thumbnail {
     width: 100%;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
 }
 
 .blog-post-thumbnail.columbia {
@@ -744,8 +951,9 @@ sup {
 
 .swiper {
     margin-top: 50px;
-    width: 40em;
-    height: 40em;
+    max-width: 40em;
+    min-width: 100%;
+    aspect-ratio: 1;
 }
 
 .swiper-slide img {
@@ -776,18 +984,20 @@ sup {
 .lab-banner.funding {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/estrous.jpeg");
     background-position: top;
-}
-
-.funding-wrapper {
-    margin: 75px auto;
+    background-size: cover;
 }
 
 .funding-source {
-    margin: 50px 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .funding-source h3 {
-    font-size: 32px;
+    font-size: var(--fs-500);
+}
+
+.funding-source-text p {
+   
 }
 
 .funding-link {
@@ -801,25 +1011,26 @@ sup {
 }
 
 .funding-logo {
-    margin-top: 21.28px;
-    max-width: 345px;
-    max-height: 100px;
+    margin-block: 2rem;
+    width: 100%;
+    max-width: 40em;
+    height: auto;
 }
 
-.hr-funding {
-    margin-left: 200px;
-    margin-right: 200px;
+.funding-logo.sfari {
+    max-width: 10em;
+}
+
+.funding-logo.nimh {
+    max-width: 20em;
 }
 
 /* CSS for contact.html */
 
-.contact-wrapper {
-    margin: 75px 100px;
-}
-
 .lab-banner.contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/sackler.jpeg");
     background-position: top center;
+    background-size: cover;
 }
 
 .contact-container {
@@ -837,7 +1048,7 @@ sup {
 
 label {
     display: block;
-    margin: 20px 0px;
+    margin: 2rem 0;
 }
 
 input,
@@ -875,9 +1086,8 @@ textarea {
     max-width: 400px;
 }
 
-.hr-contact {
-    width: 100%;
-    margin: 50px auto;
+.contact-text h2 {
+    font-size: var(--fs-600);
 }
 
 .location {
@@ -887,7 +1097,7 @@ textarea {
 }
 
 #map {
-    min-width: 500px;
+    min-width: 350px;
 }
 
 iframe {
@@ -904,18 +1114,22 @@ iframe {
 }
 
 .location-text h2 {
-    font-size: 36px;
+    font-size: var(--fs-500);
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 1049px) {
+.location-text p {
+    font-size: var(--fs-300);
+}
+
+@media screen and (max-width: 944px) {
     .location-text {
         height: fit-content;
-        min-width: 500px;
+        min-width: 350px;
     }
 }
 
-/* CSS for contact.html */
+/* CSS for 404.html */
 
 .error-404 {
     display: flex;
