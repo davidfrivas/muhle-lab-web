@@ -265,7 +265,7 @@ body {
     }
 
     .header .navbar .header-link {
-        font-size: var(--fs-450);
+        font-size: var(--fs-400);
         margin-block: 0;
     }
 
@@ -310,6 +310,7 @@ body {
 @media (max-width: 600px) {
     .header .navbar .header-link {
         margin-block: 0;
+        font-size: var(--fs-450);
     }
 }
 
