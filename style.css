@@ -969,7 +969,8 @@ sup {
 .swiper {
     margin-top: 50px;
     max-width: 40em;
-    min-width: 100%;
+    min-width: 90%;
+    height: auto;
     aspect-ratio: 1;
 }
 
