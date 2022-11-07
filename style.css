@@ -932,6 +932,11 @@ sup {
     border-color:rgb(0 0 0 / 13%);
 }
 
+.news-blog-post {
+    max-width: 50rem;
+    margin-inline: auto;
+}
+
 .news-blog-post h3 {
     font-size: var(--fs-450);
     color: #208CA7;
