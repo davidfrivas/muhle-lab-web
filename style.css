@@ -265,7 +265,8 @@ body {
     }
 
     .header .navbar .header-link {
-        font-size: var(--fs-400);
+        font-size: var(--fs-450);
+        margin-block: 0;
     }
 
     .navbar .dropdown .dropdown-content[menu-visible="true"] {
@@ -308,7 +309,7 @@ body {
 
 @media (max-width: 600px) {
     .header .navbar .header-link {
-        font-size: var(--fs-450);
+        margin-block: 0;
     }
 }
 
