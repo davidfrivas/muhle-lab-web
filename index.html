@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Muhle Lab</title>
         <meta name="description" content="The Muhle Lab, led by Dr. Rebecca
         Muhle, is a part of the New York State Psychiatric Institute and
@@ -16,7 +17,7 @@
     
     <body>
         <div id="main">
-            <div class="lab-banner">
+            <div class="lab-banner home">
                 <div class="header">
                     <div class="logo"><a href="./" title="Home"><strong>Muhle</strong> Lab</a></div>
                     <i class="fa fa-bars mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><span class="sr-only">Menu</span></i>
@@ -39,26 +40,33 @@
                         href="./pages/contact">Contact</a>
                     </div>
                 </div>
-                <div class="banner-content">
-                    <h1 class="banner-home-title">Muhle Lab</h1>
-                    <h3>Molecular Genomics of Neurodevelopment</h3>
-                    <div class="dept">Columbia University & New York State Psychiatric Institute
-                        Department of Psychiatry</div>
+                <div class="wrapper">
+                    <div class="banner-content home">
+                        <div class="banner-text">
+                            <div class="welcome">Welcome to the</div>
+                            <h1 class="home-title">Muhle Lab</h1>
+                            <div class="mgn">Molecular Genomics of
+                            Neurodevelopment</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="mission-statement">
-                <div class="mission-text">
-                    <h2>Bridging the gap between molecular genetics and psychiatry</h2>
-                    <p>We aim to uncover genetic pathways that increase the
-                    likelihood of neurodevelopmental disorders such as autism by utilizing
-                    high-throughput genomics methods and exploring the effects of disruptions in these genetic pathways using mouse and human model systems.</p>
+                <div class="wrapper">
+                    <div class="mission-text">
+                        <h2>Bridging the gap between molecular genetics and psychiatry</h2>
+                        <p>We aim to uncover genetic pathways that increase the
+                        likelihood of neurodevelopmental disorders such as autism by utilizing
+                        high-throughput genomics methods and exploring the effects of disruptions in these genetic pathways using mouse and human model systems.</p>
+                    </div>
+                    <button onclick="location.href='./pages/research'"
+                    type="button">Learn more</button>
                 </div>
-                <button onclick="location.href='./pages/research'" type="button">Learn more</button>
             </div>
 
             <div class="wrapper">
-                <div class="latest-news">
+                <div class="latest-news home">
                     <div class="news-boxes">
                         <h2 class="latest-news-title">Latest News</h2>
                         <div class="news-box">
