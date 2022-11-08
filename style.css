@@ -185,7 +185,7 @@ body {
 .navbar {
     display: flex;
     gap: 18px;
-    margin: 25px 50px;
+    margin-top: 2rem;
     padding: 0px;
     flex-wrap: wrap;
     justify-content: flex-end;
