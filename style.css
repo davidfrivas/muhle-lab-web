@@ -960,10 +960,6 @@ sup {
     color: #9A89B4;
 }
 
-.news-post-hr {
-    border-color:rgb(0 0 0 / 13%);
-}
-
 .news-blog-post {
     max-width: 50rem;
     margin-inline: auto;
