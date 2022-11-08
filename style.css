@@ -16,6 +16,7 @@ html { font-family: 'Inter', sans-serif; }
     --fs-450: 1.3rem;
     --fs-400: 1rem;
     --fs-300: 0.75rem;
+    --fs-mobile-header: 1.2rem;
 }
 
 body {
@@ -43,6 +44,12 @@ body {
         --fs-450: 1.75rem;
         --fs-400: 1.2rem;
         --fs-300: 1rem;
+    }
+}
+
+@media (max-width: 37.5em) {
+    :root {
+        --fs-mobile-header: 1.3rem;
     }
 }
 
