@@ -258,6 +258,7 @@ body {
         inset: 0 0 0 0;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(1rem);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
