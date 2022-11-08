@@ -145,13 +145,7 @@ body {
     }
 }
 
-@media (min-width: 62.5em) {
-    .lab-banner.home {
-        background-size: 150%;
-    }
-}
-
-@media (min-width: 78.125em) {
+@media (min-width: 68.75em) {
     .lab-banner.home {
         background-size: 130%;
     }
