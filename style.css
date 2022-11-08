@@ -79,6 +79,20 @@ body {
     }
 }
 
+.slide-down {
+    animation: slideDown 1000ms ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-1.5rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
 /* General webpage structure */
 
 * {
