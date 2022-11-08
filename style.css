@@ -408,7 +408,7 @@ a {
 .footer {
     background-color: #1E1926;
     color: white;
-    padding-block: min(10vh, 6.25rem);
+    padding-block: min(5vh, 6.25rem);
 }
 
 .footer .logo {
