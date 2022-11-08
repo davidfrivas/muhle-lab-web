@@ -268,10 +268,6 @@ body {
         transform: translateX(100%);
     }
 
-    .navbar::before {
-        backdrop-filter: blur(1rem);
-    }
-
     .navbar .dropdown {
         padding-bottom: 0;
     }
