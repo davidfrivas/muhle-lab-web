@@ -258,7 +258,6 @@ body {
         inset: 0 0 0 0;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(1rem);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -266,6 +265,10 @@ body {
         padding: 100px 100px 50px 50px;
         margin: 0px;
         transform: translateX(100%);
+    }
+
+    .navbar::before {
+        backdrop-filter: blur(1rem);
     }
 
     .navbar .dropdown {
