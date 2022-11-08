@@ -103,19 +103,19 @@ body {
     background-position: 67% bottom;
 }
 
-@media (min-width: 24.375em) {
+@media (min-width: 22.5em) {
     .lab-banner.home {
         background-size: 375%;
     }
 }
 
-@media (min-width: 26.875em) {
+@media (min-width: 25em) {
     .lab-banner.home {
         background-size: 325%;
     }
 }
 
-@media (min-width: 31.25em) {
+@media (min-width: 28.75em) {
     .lab-banner.home {
         background-size: 275%;
     }
@@ -145,19 +145,25 @@ body {
     }
 }
 
-@media (min-width: 79.6875em) {
+@media (min-width: 62.5em) {
+    .lab-banner.home {
+        background-size: 150%;
+    }
+}
+
+@media (min-width: 78.125em) {
     .lab-banner.home {
         background-size: 130%;
     }
 }
 
-@media (min-width: 92.1875em) {
+@media (min-width: 90.625em) {
     .lab-banner.home {
         background-size: 110%;
     }
 }
 
-@media (min-width: 109.375em) {
+@media (min-width: 106.25em) {
     .lab-banner.home {
         background-size: 100%;
         background-position: 67% 98%;
@@ -171,17 +177,17 @@ body {
     }
 }
 
-@media (min-width: 140.625em) {
+@media (min-width: 137.5em) {
     .lab-banner.home {
         background-size: 100%;
-        background-position: 67% 91%;
+        background-position: 67% 89%;
     }
 }
 
 @media (min-width: 156.25em) {
     .lab-banner.home {
         background-size: 100%;
-        background-position: 67% 80%;
+        background-position: 67% 82%;
     }
 }
 
