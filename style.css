@@ -62,7 +62,7 @@ body {
 /* CSS animations */
 
 .fade-in-fast {
-    animation: fadeIn 2000ms ease-in-out;
+    animation: fadeIn 3000ms ease-in-out;
 }
 
 .fade-in-slow {
