@@ -130,6 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
+    background-color: #1E1926;
 }
 
 .lab-banner.home {
