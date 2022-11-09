@@ -80,7 +80,7 @@ body {
 }
 
 .slide-down {
-    animation: slideDown 1000ms ease-out;
+    animation: slideDown 900ms ease-out;
 }
 
 @keyframes slideDown {
