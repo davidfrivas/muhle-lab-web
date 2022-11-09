@@ -503,6 +503,7 @@ a {
 
 .mission-statement {
     padding-block: min(10vh, 6.25rem);
+    background-color: black;
     background-image: linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(./images/gwb.jpg);
     background-size: cover;
     background-position: 35% center;
