@@ -986,6 +986,7 @@ sup {
 /* CSS for news posts */
 
 .lab-banner.news-post {
+    background-color: white;
     background-image: none;
     color: black;
 }
