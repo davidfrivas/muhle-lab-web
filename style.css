@@ -648,8 +648,8 @@ p {
     flex-direction: row-reverse;
 }
 
-.lab-member.even img {
-    align-self: flex-end;
+.lab-member img {
+    align-self: center;
 }
 
 .member-summary {
