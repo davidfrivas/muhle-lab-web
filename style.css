@@ -1086,6 +1086,7 @@ sup {
 
 .funding-source h3 {
     font-size: var(--fs-500);
+    font-weight: 500;
 }
 
 .funding-source-text p {
@@ -1115,6 +1116,24 @@ sup {
 
 .funding-logo.nimh {
     max-width: 20em;
+}
+
+.funding-status {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  width: fit-content;
+  color: white;
+  font-weight: 150;
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  background-color: #1E1926;
+}
+
+.funding-status hr {
+    align-self: stretch;
+    margin: 0 2rem 0 0;
+    border: 1px solid #9A89B4;
 }
 
 /* CSS for contact.html */
