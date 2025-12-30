@@ -40,7 +40,13 @@ jobs:
         env:
           NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: npx tinacms build
+        run: |
+          if [ -z "$NEXT_PUBLIC_TINA_CLIENT_ID" ]; then
+            echo "No TinaCloud credentials - building in local/static mode"
+            TINA_PUBLIC_IS_LOCAL=true npx tinacms build || true
+          else
+            npx tinacms build
+          fi
 
       - name: Build Next.js
         run: npm run export
