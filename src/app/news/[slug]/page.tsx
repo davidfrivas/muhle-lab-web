@@ -3,6 +3,17 @@ import type { Metadata } from 'next'
 import { PageBanner, ImageCarousel } from '@/components'
 import { getNewsPost, getNewsSlugs } from '@/lib/content'
 
+// Convert markdown to HTML
+function processMarkdown(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>') // [text](url) links
+    .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>') // ***bold italic***
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
+    .replace(/\*(.*?)\*/g, '<em>$1</em>') // *italic*
+    .replace(/\n\n/g, '</p><p>') // paragraph breaks
+    .replace(/\n/g, '<br/>') // line breaks
+}
+
 interface NewsPostPageProps {
   params: Promise<{
     slug: string
@@ -73,7 +84,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             )}
 
             {/* Post Content */}
-            <div className="prose-lab" dangerouslySetInnerHTML={{ __html: post.body.replace(/\n/g, '<br/>') }} />
+            <div className="prose-lab" dangerouslySetInnerHTML={{ __html: processMarkdown(post.body) }} />
 
             {/* Image Carousel */}
             {post.carousel && post.carousel.length > 0 && (
