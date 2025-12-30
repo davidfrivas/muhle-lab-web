@@ -1,0 +1,99 @@
+{
+  "featured": [
+    {
+      "name": "David Rivas",
+      "title": "Research Assistant (2019-2026)",
+      "bio": "David joined the Muhle lab in December 2019 as a Research Assistant. His roles included conducting animal behavior, electroencephalography (EEG), computational analyses, histology, and laboratory/mouse colony management. In January 2026, David entered a new role as a Backend Developer at IBM.",
+      "image": "../images/david-rivas.jpeg",
+      "alt": "picture of David Rivas",
+      "social": [
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/david-f-rivas/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/davidfrivas"
+        }
+      ]
+    },
+    {
+      "name": "Sam Dhanani",
+      "title": "Research Assistant (2023-2025)",
+      "bio": "During her time in the lab, Sam studied the behavior and neural circuitry of <em>Chd8</em> haploinsufficient mice. She pioneered assays such as operand conditioning and fiber photometry. Sam is currently a PhD student in Neuroscience and Behavior at University of Massachusetts Amherst.",
+      "image": "../images/sam-dhanani.jpg",
+      "alt": "picture of Sam Dhanani",
+      "social": []
+    },
+    {
+      "name": "Yun-Kyung Kim",
+      "title": "Research Assistant (2020-2022)",
+      "bio": "During her time in the lab, Yun-Kyung studied the molecular biology of <em>Chd8</em> haploinsufficiency in mice. She employed techniques such as chromatin immunoprecipitation (ChIP), RNA extraction, cDNA synthesis, qRT-PCR analysis, and western blotting. Additionally, she performed a comprehensive medical literature review of the association of likely damaging human <em>CHD8</em> mutations with seizures and abnormal EEG. Yun-Kyung is currently a medical student at Wright State University Boonshoft School of Medicine.",
+      "image": "../images/yun-kyung.jpg",
+      "alt": "picture of Yun-Kyung Kim",
+      "social": []
+    }
+  ],
+  "alumniList": [
+    {
+      "name": "Arrinne Hoque",
+      "years": "2023-2025",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Nicole Pimentel Soler",
+      "years": "2023-2025",
+      "position": "Graduate Researcher, Columbia University"
+    },
+    {
+      "name": "Jeanette Marie Luna",
+      "years": "2023-2025",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Hannah Kim",
+      "years": "2022-2023",
+      "position": "Graduate Researcher, Columbia Universty"
+    },
+    {
+      "name": "Mahdia Begum",
+      "years": "2021-2023",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Catalina Lopez",
+      "years": "2020-2022",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Katina Pierre-Louis",
+      "years": "2020-2022",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Kaitlyn Hazzard",
+      "years": "2020-2021",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Claudia Weiss",
+      "years": "2020-2021",
+      "position": "Undergraduate Researcher, Barnard College"
+    },
+    {
+      "name": "Britt Bistis",
+      "years": "2020",
+      "position": "Undergraduate Researcher, Yale University"
+    },
+    {
+      "name": "Morgan Healey",
+      "years": "2020",
+      "position": "Undergraduate Researcher, Brown University"
+    },
+    {
+      "name": "Isabel Stobin",
+      "years": "2020",
+      "position": "High School Student"
+    }
+  ]
+}

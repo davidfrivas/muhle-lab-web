@@ -50,64 +50,9 @@
 
             <div class="wrapper page-content">
                 <div class="latest-news">
-                    <div class="news-boxes">
+                    <div class="news-boxes" id="news-container">
                         <h2 class="latest-news-title">Latest News</h2>
-                        <div class="news-box">
-                          <a href="./news/2023-sri-poster-session">
-                              <img class="news-img" src="../images/2023-sri.jpg" alt="Muhle Lab at Barnard College 2023 SRI poster session">
-                              <h3 class="news-date">2 August 2023</h3>
-                              <h2 class="news-box-title">2023 SRI Poster Session</h2>
-                          </a>
-                        </div>
-                        <div class="news-box">
-                          <a href="./news/2023-graduation-party">
-                              <img class="news-img" src="../images/baylander-steel-beach.jpg" alt="Baylander Steel Beach restaurant">
-                              <h3 class="news-date">11 May 2023</h3>
-                              <h2 class="news-box-title">2023 Graduation Party</h2>
-                          </a>
-                        </div>
-                        <div class="news-box">
-                          <a href="./news/insar-2023">
-                              <img class="news-img" src="../images/insar-2023.jpg" alt="Muhle Lab in
-                              Stockholm, Sweden">
-                              <h3 class="news-date">5 May 2023</h3>
-                              <h2 class="news-box-title">Muhle Lab Attends INSAR 2023</h2>
-                          </a>
-                        </div>
-                        <div class="news-box">
-                            <a href="./news/wcpg-2022">
-                                <img class="news-img" src="../images/florence.jpg" alt="photo of Florence, Italy">
-                                <h3 class="news-date">13 September 2022</h3>
-                                <h2 class="news-box-title">Dr. Muhle Attends WCPG in
-                                Florence</h2>
-                            </a>
-                        </div>
-                        <div class="news-box">
-                            <a href="./news/2022-sri-poster-session">
-                                <img class="news-img" src=".././images/2022-sri.jpg"
-                                alt="group picture of Muhle lab students at
-                                Barnard College 2022 SRI poster
-                                session">
-                                <h3 class="news-date">3 August 2022</h3>
-                                <h2 class="news-box-title">2022 SRI Poster Session</h2>
-                            </a>
-                        </div>
-                        <div class="news-box">
-                            <a href="./news/farewell-to-yk">
-                                <img class="news-img" src="../images/rebecca-yk.jpg"
-                                alt="photo of Rebecca Muhle and Yun-Kyung Kim">
-                                <h3 class="news-date">24 June 2022</h3>
-                                <h2 class="news-box-title">Farewell to Yun-Kyung</h2>
-                            </a>
-                        </div>
-                        <div class="news-box">
-                            <a href="./news/gerstner-scholar">
-                                <img class="news-img columbia" src="../images/columbia-logo.png" alt="Columbia University logo">
-                                <h3 class="news-date">8 February 2022</h3>
-                                <h2 class="news-box-title">Dr. Muhle Selected as a
-                                Gerstner Scholar</h2>
-                            </a>
-                        </div>
+                        <!-- News boxes will be loaded here by JavaScript -->
                     </div>
                 </div>
             </div>
@@ -139,5 +84,37 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // Load news posts from JSON file
+            fetch('../data/news.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('news-container');
+                    
+                    data.posts.forEach(post => {
+                        const newsBox = document.createElement('div');
+                        newsBox.className = 'news-box';
+                        
+                        const imgClass = post.extraClass ? `news-img ${post.extraClass}` : 'news-img';
+                        
+                        newsBox.innerHTML = `
+                            <a href="${post.url}">
+                                <img class="${imgClass}" src="${post.image}" alt="${post.alt}">
+                                <h3 class="news-date">${post.date}</h3>
+                                <h2 class="news-box-title">${post.title}</h2>
+                            </a>
+                        `;
+                        
+                        container.appendChild(newsBox);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading news:', error);
+                    // Fallback: show error message
+                    document.getElementById('news-container').innerHTML += 
+                        '<p>Unable to load news posts. Please try again later.</p>';
+                });
+        </script>
     </body>
 </html>
