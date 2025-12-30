@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export interface SocialLinks {
   linkedin?: string | null;
@@ -55,7 +56,7 @@ export function TeamMemberCard({
       {/* Profile Image */}
       <div className="flex-shrink-0 w-full md:w-auto">
         <img
-          src={image || ''}
+          src={withBasePath(image || '')}
           alt={`Portrait of ${name}`}
           className="w-full max-w-[400px] h-auto object-cover mx-auto md:mx-0"
           loading="lazy"

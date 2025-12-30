@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { PageBanner, ImageCarousel } from '@/components'
 import { getNewsPost, getNewsSlugs } from '@/lib/content'
+import { withBasePath } from '@/lib/utils'
 
 // Convert markdown to HTML
 function processMarkdown(text: string): string {
@@ -78,7 +79,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             {/* Featured Image */}
             {post.featuredImage && (
               <img
-                src={post.featuredImage}
+                src={withBasePath(post.featuredImage)}
                 alt={post.featuredImageAlt || post.title}
                 className="w-full h-auto mb-8 rounded-lg"
               />

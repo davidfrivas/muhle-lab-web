@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { PageBanner, NewsCard } from '@/components'
 import { getAllNewsPosts, getGlobalSettings } from '@/lib/content'
+import { withBasePath } from '@/lib/utils'
 
 export const metadata = {
   title: 'Muhle Lab',
@@ -35,7 +36,7 @@ export default async function HomePage() {
       <section
         className="py-16 md:py-24 text-white bg-black bg-cover"
         style={{
-          backgroundImage: 'linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(/images/gwb.jpg)',
+          backgroundImage: `linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(${withBasePath('/images/gwb.jpg')})`,
           backgroundPosition: '35% center',
         }}
       >

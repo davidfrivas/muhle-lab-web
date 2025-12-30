@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export type LogoSize = 'small' | 'medium' | 'large';
 export type FundingStatus = 'active' | 'past' | 'pending';
@@ -82,7 +83,7 @@ export function FundingSource({
               className="block"
             >
               <img
-                src={logo || ''}
+                src={withBasePath(logo || '')}
                 alt={`${fundingSource || ''} logo`}
                 className={clsx('h-auto', logoSizeClasses[effectiveLogoSize])}
                 loading="lazy"
@@ -90,7 +91,7 @@ export function FundingSource({
             </a>
           ) : logo ? (
             <img
-              src={logo}
+              src={withBasePath(logo)}
               alt={`${fundingSource || ''} logo`}
               className={clsx('h-auto', logoSizeClasses[effectiveLogoSize])}
               loading="lazy"

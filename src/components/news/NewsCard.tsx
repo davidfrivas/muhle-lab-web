@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export interface NewsCardProps {
   title: string;
@@ -42,7 +43,7 @@ export function NewsCard({
         {/* Image with aspect ratio */}
         <div className="relative overflow-hidden aspect-news mb-4">
           <img
-            src={imgSrc}
+            src={withBasePath(imgSrc)}
             alt={imgAlt}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"

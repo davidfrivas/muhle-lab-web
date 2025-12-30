@@ -2,6 +2,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 type BannerVariant =
   | 'home'
@@ -89,7 +90,7 @@ export default function PageBanner({
       {bgImage && (
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${bgImage})` }}
+          style={{ backgroundImage: `url(${withBasePath(bgImage)})` }}
         />
       )}
 

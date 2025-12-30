@@ -4,6 +4,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -39,7 +40,7 @@ export function ImageCarousel({
     return (
       <div className={clsx('w-full', className)}>
         <img
-          src={images[0].src}
+          src={withBasePath(images[0].src)}
           alt={images[0].alt}
           className="w-full h-auto object-cover"
         />
@@ -65,7 +66,7 @@ export function ImageCarousel({
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img
-              src={image.src}
+              src={withBasePath(image.src)}
               alt={image.alt}
               className="w-full h-auto object-cover"
               loading={index === 0 ? 'eager' : 'lazy'}

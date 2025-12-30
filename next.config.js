@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+const basePath = isGitHubPages ? '/muhle-lab-web' : ''
 
 const nextConfig = {
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   // Only use static export for production builds
   ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
   images: {

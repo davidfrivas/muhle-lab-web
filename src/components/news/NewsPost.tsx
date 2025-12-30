@@ -1,6 +1,7 @@
 import React from 'react';
 import { ImageCarousel, CarouselImage } from './ImageCarousel';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export interface NewsPostProps {
   title: string;
@@ -53,7 +54,7 @@ export function NewsPost({
           <ImageCarousel images={carousel} />
         ) : (
           <img
-            src={featuredImage}
+            src={withBasePath(featuredImage)}
             alt={featuredImageAlt || title}
             className="w-full h-auto object-cover"
           />

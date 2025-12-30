@@ -1,6 +1,7 @@
 import React from 'react';
 import { Figure } from '../ui/Figure';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export interface OverviewSection {
   type: 'text' | 'figure' | 'text-with-figure';
@@ -49,7 +50,7 @@ export function ResearchOverview({
           return (
             <figure key={index} className={clsx('my-6', isFullWidth && 'w-full')}>
               <img
-                src={section.src}
+                src={withBasePath(section.src || '')}
                 alt={section.alt || ''}
                 className="max-w-full h-auto"
               />

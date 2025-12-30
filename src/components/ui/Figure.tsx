@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { withBasePath } from '@/lib/utils';
 
 export interface FigureProps {
   src: string;
@@ -38,7 +39,7 @@ export function Figure({
       )}
     >
       <img
-        src={src}
+        src={withBasePath(src)}
         alt={alt}
         className={clsx(
           'max-w-full h-auto',
