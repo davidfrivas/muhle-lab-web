@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Only use static export for production builds
+  ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
   images: {
     unoptimized: true,
   },
@@ -8,6 +9,15 @@ const nextConfig = {
   // Ensure static export works with GitHub Pages
   basePath: '',
   assetPrefix: '',
+  // Rewrites for development mode (to serve admin panel)
+  async rewrites() {
+    return [
+      {
+        source: '/admin',
+        destination: '/admin/index.html',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
