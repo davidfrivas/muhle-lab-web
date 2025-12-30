@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POST TITLE HERE | Muhle Lab</title>
+        <link rel="icon" type="image/x-icon" href="../../icons/favicon.png">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="../../nav.js" defer></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQ8QPV9BZ9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GQ8QPV9BZ9');
+        </script>
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="lab-banner news-post">
+                <div class="header wrapper">
+                    <div class="logo"><a href="../../" title="Home"><strong>Muhle</strong> Lab</a></div>
+                    <i class="fa fa-bars mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><span class="sr-only">Menu</span></i>
+                    <div class="navbar news-post" data-visible="false">
+                        <a class="header-link" href="../../">Home</a>
+                        <div class="dropdown">
+                            <span class="header-link dropdown-button">Team</span>
+                            <div class="dropdown-content" menu-visible="false">
+                                <a class="header-link" href=".././team">Members</a>
+                                <a class="header-link" href=".././alumni">Alumni</a>
+                            </div>
+                        </div>
+                        <a class="header-link" href=".././research">Research</a>
+                        <a class="header-link current-page" href=".././news">News</a>
+                        <a class="header-link" href=".././funding">Funding</a>
+                        <a class="header-link" href=".././contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wrapper page-content">
+                <div class="news-blog-post">
+                    <!-- REPLACE THIS DATE -->
+                    <h3>DD Month YYYY</h3>
+                    
+                    <!-- REPLACE THIS TITLE -->
+                    <h2>Your News Post Title Here</h2>
+                    
+                    <div class="blog-post-entry">
+                        <!-- REPLACE IMAGE PATH AND ALT TEXT -->
+                        <img class="blog-post-thumbnail" src="../../images/your-image.jpg" 
+                             alt="description of image">
+                        
+                        <!-- ADD YOUR CONTENT BELOW - You can have multiple paragraphs -->
+                        <p>First paragraph of your news post goes here...</p>
+                        
+                        <p>Second paragraph here. To add a link, use: 
+                           <a class="blog-link" href="https://example.com" target="_blank">link text</a>
+                        </p>
+                        
+                        <!-- OPTIONAL: Image Carousel/Slideshow -->
+                        <!-- Delete this entire section if you don't need a slideshow -->
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../images/slide1.jpg" alt="description">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/slide2.jpg" alt="description">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../images/slide3.jpg" alt="description">
+                                </div>
+                            </div>  
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <!-- END OF OPTIONAL SLIDESHOW -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="wrapper">
+                    <div class="logo"><strong>Muhle</strong> Lab</div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            New York State Psychiatric Institute<br>
+                            Columbia University Department of Psychiatry<br>
+                        </p>
+                    </div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            Herbert Pardes Building, Room 4935<br>
+                            1051 Riverside Dr<br>
+                            New York, NY 10032<br>
+                        </p>
+                    </div>
+                    <div class="footer-address">
+                        <hr>
+                        <p>
+                            Copyright &copy; <script>document.write(new Date().getFullYear())</script> Muhle Lab
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow script - only needed if using the carousel above -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </body>
+</html>
