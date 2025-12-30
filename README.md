@@ -6,23 +6,44 @@ Website for the Muhle Lab at the New York State Psychiatric Institute | Columbia
 
 ## Quick Start
 
-### For Content Editors (Local)
+### Prerequisites
+
+- Node.js 18 or later
+- npm (comes with Node.js)
+
+### Local Development
 
 ```bash
+# Install dependencies
 npm install
+
+# Start the development server
 npm run dev
 ```
 
-Then go to [http://localhost:3000/admin](http://localhost:3000/admin) to edit content.
+This starts:
+- **Website:** http://localhost:3000
+- **TinaCMS Admin:** http://localhost:3000/admin (visual editor for content)
+- **TinaCMS Data Layer:** runs on port 9000 (internal, no need to access directly)
 
-### For Developers
+### Building for Production
 
 ```bash
-npm install
-npm run dev
+# Build static site (no TinaCloud required)
+npm run export
+
+# Or with TinaCloud integration (requires TINA_CLIENT_ID and TINA_TOKEN)
+npm run build
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) for the site.
+The static files are output to the `out/` directory.
+
+### For Content Editors
+
+1. Run `npm install` then `npm run dev`
+2. Go to http://localhost:3000/admin
+3. Edit content through the visual interface
+4. Save changes (automatically commits to Git)
 
 ## Tech Stack
 

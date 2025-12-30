@@ -158,17 +158,38 @@ export function getAllResearchProjects(): ResearchProject[] {
     .sort((a, b) => (a.order || 0) - (b.order || 0))
 }
 
-export function getResearchOverview(): { title: string; content: string; figures?: Array<{ src: string; alt: string; caption?: string }> } | null {
+export interface ResearchOverviewSection {
+  type: 'text' | 'figure' | 'text-with-figure'
+  content?: string
+  figure?: {
+    src: string
+    alt: string
+    caption?: string
+    position?: 'left' | 'right' | 'full-width'
+    credit?: string
+  }
+  src?: string
+  alt?: string
+  caption?: string
+  position?: 'left' | 'right' | 'full-width'
+  credit?: string
+}
+
+export interface ResearchOverviewData {
+  title: string
+  sections: ResearchOverviewSection[]
+}
+
+export function getResearchOverview(): ResearchOverviewData | null {
   const filePath = path.join(contentDir, 'research-overview', 'overview.mdx')
   if (!fs.existsSync(filePath)) return null
 
   const fileContent = fs.readFileSync(filePath, 'utf-8')
-  const { data, content } = matter(fileContent)
+  const { data } = matter(fileContent)
 
   return {
     title: data.title || 'Research Overview',
-    content: content,
-    figures: data.figures,
+    sections: data.sections || [],
   }
 }
 

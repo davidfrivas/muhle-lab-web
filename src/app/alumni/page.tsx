@@ -1,6 +1,19 @@
 import { PageBanner, TeamMember } from '@/components'
 import { getAllAlumni, getAlumniList, getGlobalSettings } from '@/lib/content'
 
+// Convert markdown to HTML
+function processMarkdown(text: string): string {
+  return text
+    .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>') // ***bold italic***
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
+    .replace(/\*(.*?)\*/g, '<em>$1</em>') // *italic*
+    .replace(/\+\/-/g, '<sup>+/-</sup>') // +/- superscript
+    .replace(/<sup>/g, '<sup>') // preserve existing sup tags
+    .replace(/<\/sup>/g, '</sup>')
+    .replace(/\n\n/g, '</p><p>') // paragraph breaks
+    .replace(/\n/g, '<br/>') // line breaks
+}
+
 export const metadata = {
   title: 'Alumni',
   description: 'Former members of the Muhle Lab research team.',
@@ -30,7 +43,7 @@ export default async function AlumniPage() {
               name={alumni.name}
               role={`${alumni.role} (${alumni.yearsActive})`}
               image={alumni.image}
-              bio={alumni.bio ? <div dangerouslySetInnerHTML={{ __html: alumni.bio.replace(/\n/g, '<br/>') }} /> : undefined}
+              bio={alumni.bio ? <div dangerouslySetInnerHTML={{ __html: processMarkdown(alumni.bio) }} /> : undefined}
               socialLinks={alumni.socialLinks}
               currentPosition={alumni.currentPosition}
               isEven={index % 2 === 1}

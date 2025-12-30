@@ -295,6 +295,8 @@ Contact the lab webmaster to be added as a collaborator if you don't already hav
 
 \subsection{Accessing the Editor}
 
+\subsubsection{Production (Online)}
+
 \begin{stepbox}
 \textbf{Step 1:} Open your web browser (Chrome, Firefox, Safari, or Edge)
 \end{stepbox}
@@ -314,6 +316,36 @@ Contact the lab webmaster to be added as a collaborator if you don't already hav
 \begin{stepbox}
 \textbf{Step 5:} You will be redirected to the visual editor dashboard
 \end{stepbox}
+
+\subsubsection{Local Development}
+
+For developers running the site locally:
+
+\begin{stepbox}
+\textbf{Step 1:} Open a terminal in the project folder
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 2:} Run \texttt{npm install} (first time only)
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 3:} Run \texttt{npm run dev} to start the development server
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 4:} Access the admin panel at \textbf{\url{http://localhost:3000/admin}}
+\end{stepbox}
+
+\begin{tipbox}
+\textbf{Development Server Architecture:}
+\begin{itemize}[noitemsep]
+    \item \textbf{Port 3000} --- Next.js website and admin UI
+    \item \textbf{Port 4001} --- TinaCMS Vite dev server (internal)
+    \item \textbf{Port 9000} --- TinaCMS GraphQL data layer (internal)
+\end{itemize}
+You only need to access port 3000; the other ports are used internally by the CMS.
+\end{tipbox}
 
 \newpage
 

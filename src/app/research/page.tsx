@@ -13,6 +13,7 @@ function processMarkdown(text: string): string {
     .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><i>$1</i></strong>') // ***bold italic***
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
     .replace(/\*(.*?)\*/g, '<i>$1</i>') // *italic*
+    .replace(/\+\/-/g, '<sup>+/-</sup>') // +/- superscript
     .replace(/<sup>/g, '<sup>') // preserve existing sup tags
     .replace(/<\/sup>/g, '</sup>')
     .replace(/\n\n/g, '</p><p>') // paragraph breaks
@@ -40,10 +41,10 @@ export default async function ResearchPage() {
               {researchOverview.title || 'Research Goals'}
             </h2>
             <ResearchOverview
-              content={<div dangerouslySetInnerHTML={{ __html: processMarkdown(researchOverview.content) }} />}
-              figures={researchOverview.figures}
+              sections={researchOverview.sections}
+              processMarkdown={processMarkdown}
             />
-            <hr className="page-break" />
+            <hr className="page-break my-12" />
           </>
         )}
 

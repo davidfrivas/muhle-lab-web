@@ -62,9 +62,10 @@ export function ResearchProject({
 
         {/* Content */}
         <div className={clsx('flex-1', figure && 'lg:w-3/5')}>
-          <h3 className="text-xl md:text-2xl font-semibold text-lab-dark mb-4">
-            {heading}
-          </h3>
+          <h3
+            className="text-xl md:text-2xl font-semibold text-lab-dark mb-4"
+            dangerouslySetInnerHTML={{ __html: heading || '' }}
+          />
           <div className="prose-lab">
             {description}
           </div>

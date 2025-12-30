@@ -10,6 +10,7 @@ function processMarkdown(text: string): string {
     .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>') // ***bold italic***
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
     .replace(/\*(.*?)\*/g, '<em>$1</em>') // *italic*
+    .replace(/\+\/-/g, '<sup>+/-</sup>') // +/- superscript
     .replace(/\n\n/g, '</p><p>') // paragraph breaks
     .replace(/\n/g, '<br/>') // line breaks
 }

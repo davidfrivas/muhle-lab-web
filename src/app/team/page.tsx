@@ -2,6 +2,19 @@ import Link from 'next/link'
 import { PageBanner, TeamMember } from '@/components'
 import { getAllTeamMembers, getGlobalSettings } from '@/lib/content'
 
+// Convert markdown to HTML
+function processMarkdown(text: string): string {
+  return text
+    .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>') // ***bold italic***
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
+    .replace(/\*(.*?)\*/g, '<em>$1</em>') // *italic*
+    .replace(/\+\/-/g, '<sup>+/-</sup>') // +/- superscript
+    .replace(/<sup>/g, '<sup>') // preserve existing sup tags
+    .replace(/<\/sup>/g, '</sup>')
+    .replace(/\n\n/g, '</p><p>') // paragraph breaks
+    .replace(/\n/g, '<br/>') // line breaks
+}
+
 export const metadata = {
   title: 'Members',
   description: 'Meet the members of the Muhle Lab research team.',
@@ -27,7 +40,7 @@ export default async function TeamPage() {
               credentials={member.credentials}
               role={member.role}
               image={member.image}
-              bio={<div dangerouslySetInnerHTML={{ __html: member.bio.replace(/\n/g, '<br/>') }} />}
+              bio={<div dangerouslySetInnerHTML={{ __html: processMarkdown(member.bio) }} />}
               socialLinks={member.socialLinks}
               isEven={index % 2 === 1}
             />
