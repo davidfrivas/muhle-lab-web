@@ -7,6 +7,18 @@ export const metadata = {
     'Learn about the research projects and goals of the Muhle Lab, focusing on CHD8 and autism spectrum disorder.',
 }
 
+// Simple markdown to HTML conversion for italics and superscript
+function processMarkdown(text: string): string {
+  return text
+    .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><i>$1</i></strong>') // ***bold italic***
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
+    .replace(/\*(.*?)\*/g, '<i>$1</i>') // *italic*
+    .replace(/<sup>/g, '<sup>') // preserve existing sup tags
+    .replace(/<\/sup>/g, '</sup>')
+    .replace(/\n\n/g, '</p><p>') // paragraph breaks
+    .replace(/\n/g, '<br/>') // line breaks
+}
+
 export default async function ResearchPage() {
   const global = getGlobalSettings()
   const researchOverview = getResearchOverview()
@@ -28,7 +40,7 @@ export default async function ResearchPage() {
               {researchOverview.title || 'Research Goals'}
             </h2>
             <ResearchOverview
-              content={<div dangerouslySetInnerHTML={{ __html: researchOverview.content.replace(/\n/g, '<br/>') }} />}
+              content={<div dangerouslySetInnerHTML={{ __html: processMarkdown(researchOverview.content) }} />}
               figures={researchOverview.figures}
             />
             <hr className="page-break" />
@@ -44,7 +56,7 @@ export default async function ResearchPage() {
           <div key={project._sys.filename}>
             <ResearchProject
               heading={project.heading}
-              description={<div dangerouslySetInnerHTML={{ __html: project.description.replace(/\n/g, '<br/>') }} />}
+              description={<div dangerouslySetInnerHTML={{ __html: processMarkdown(project.description) }} />}
               figure={project.figure}
               layout={project.layout}
             />

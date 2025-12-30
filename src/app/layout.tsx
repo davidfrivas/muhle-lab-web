@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Header, Footer } from '@/components'
 
 export const metadata: Metadata = {
   title: {
@@ -61,8 +62,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body>
-        <div id="main">{children}</div>
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   )

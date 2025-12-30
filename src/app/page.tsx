@@ -12,46 +12,40 @@ export default async function HomePage() {
   const global = getGlobalSettings()
   const allNews = getAllNewsPosts()
 
-  // Get featured news posts
-  const featuredNews = allNews
+  // Get featured news posts (or latest 2 if no featured)
+  let featuredNews = allNews
     .filter((post) => post.featured && post.published !== false)
     .slice(0, 2)
+
+  // Fallback to latest 2 posts if no featured posts
+  if (featuredNews.length === 0) {
+    featuredNews = allNews
+      .filter((post) => post.published !== false)
+      .slice(0, 2)
+  }
 
   return (
     <>
       <PageBanner
         variant="home"
         backgroundImage={global?.images?.homeBanner}
-      >
-        <div className="banner-content home">
-          <div className="banner-text">
-            <div className="welcome animate-slide-down">Welcome to the</div>
-            <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-bold animate-fade-in-fast">
-              {global?.labInfo?.name || 'Muhle Lab'}
-            </h1>
-            <div className="text-lg md:text-2xl mt-4 animate-fade-in-slow">
-              {global?.labInfo?.tagline || 'Molecular Genomics & Neurodevelopment'}
-            </div>
-          </div>
-        </div>
-      </PageBanner>
+      />
 
-      {/* Mission Statement Section */}
+      {/* Mission Statement Section - matching original with gwb.jpg background */}
       <section
-        className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white"
+        className="py-16 md:py-24 text-white bg-black bg-cover"
         style={{
-          backgroundImage: global?.images?.missionBackground
-            ? `linear-gradient(rgba(30, 25, 38, 0.85), rgba(30, 25, 38, 0.85)), url(${global.images.missionBackground})`
-            : 'linear-gradient(to right, #1E1926, #2d2540)',
+          backgroundImage: 'linear-gradient(rgb(6 4 21 / 79%), rgb(0 0 0 / 51%)), url(/images/gwb.jpg)',
+          backgroundPosition: '35% center',
         }}
       >
-        <div className="wrapper">
-          <div className="max-w-4xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">
+        <div className="wrapper flex flex-col justify-center items-center">
+          <div className="max-w-[40rem] text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               {global?.labInfo?.missionHeading ||
                 'Bridging the gap between molecular genetics and psychiatry'}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed mb-8 opacity-90">
+            <p className="text-base md:text-lg leading-relaxed mb-8 font-light">
               {global?.labInfo?.missionStatement ||
                 'We aim to uncover genetic pathways that increase the likelihood of neurodevelopmental disorders such as autism by utilizing high-throughput genomics methods and exploring the effects of disruptions in these genetic pathways using mouse and human model systems.'}
             </p>
@@ -68,27 +62,23 @@ export default async function HomePage() {
       {/* Latest News Section */}
       <section className="py-16 md:py-24">
         <div className="wrapper">
-          <div className="latest-news home">
-            <div className="news-boxes">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-8">
-                Latest News
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                {featuredNews.map((post) => (
-                  <NewsCard
-                    key={post._sys.filename}
-                    slug={post._sys.filename}
-                    title={post.title}
-                    date={post.date}
-                    featuredImage={post.featuredImage}
-                    featuredImageAlt={post.featuredImageAlt}
-                  />
-                ))}
-              </div>
-              <Link href="/news" className="btn btn-outline inline-block">
-                See all news
-              </Link>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
+            <h2 className="text-2xl md:text-3xl font-semibold col-span-full justify-self-start">
+              Latest News
+            </h2>
+            {featuredNews.map((post) => (
+              <NewsCard
+                key={post._sys.filename}
+                slug={post._sys.filename}
+                title={post.title}
+                date={post.date}
+                featuredImage={post.featuredImage}
+                featuredImageAlt={post.featuredImageAlt}
+              />
+            ))}
+            <Link href="/news" className="btn btn-outline inline-block col-span-full justify-self-center">
+              See all news
+            </Link>
           </div>
         </div>
       </section>

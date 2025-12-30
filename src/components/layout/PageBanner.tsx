@@ -26,44 +26,43 @@ const variantConfig: Record<BannerVariant, {
   height: string;
 }> = {
   home: {
-    backgroundImage: '/images/banners/home-banner.jpg',
+    backgroundImage: '/images/lab-pic-2022.jpg',
     displayTitle: 'Muhle Lab',
-    height: 'h-screen',
+    height: 'min-h-[70vh]',
   },
   team: {
-    backgroundImage: '/images/banners/team-banner.jpg',
+    backgroundImage: '/images/lab-pic-2022.jpg',
     displayTitle: 'Our Team',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   alumni: {
-    backgroundImage: '/images/banners/team-banner.jpg',
+    backgroundImage: '/images/lab-pic-2021.JPG',
     displayTitle: 'Alumni',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   research: {
-    backgroundImage: '/images/banners/research-banner.jpg',
+    backgroundImage: '/images/nissl-banner.jpg',
     displayTitle: 'Research',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   news: {
-    backgroundImage: '/images/banners/news-banner.jpg',
+    backgroundImage: '/images/ihc-brain.jpg',
     displayTitle: 'News',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   funding: {
-    backgroundImage: '/images/banners/funding-banner.jpg',
+    backgroundImage: '/images/estrous.jpeg',
     displayTitle: 'Funding',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   contact: {
-    backgroundImage: '/images/banners/contact-banner.jpg',
+    backgroundImage: '/images/sackler.jpeg',
     displayTitle: 'Contact',
-    height: 'h-[50vh] min-h-[400px]',
+    height: 'py-24',
   },
   'news-post': {
-    backgroundImage: '/images/banners/news-banner.jpg',
     displayTitle: '',
-    height: 'h-[40vh] min-h-[300px]',
+    height: 'py-16',
   },
 };
 
@@ -107,26 +106,35 @@ export default function PageBanner({
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4">
         {isHome ? (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center py-16 md:py-24">
+            {/* Welcome text - aligned left like original */}
+            <div
+              className={clsx(
+                'text-sm md:text-base uppercase font-extralight tracking-wider',
+                'self-start animate-slide-down'
+              )}
+            >
+              Welcome to the
+            </div>
+            {/* Main title */}
             <h1
               className={clsx(
                 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl',
-                'font-light tracking-wider',
-                'animate-fade-in-slow'
+                'font-light uppercase tracking-wider',
+                'animate-fade-in-fast'
               )}
             >
-              <span className="font-bold">Muhle</span>
-              <span className="font-light"> Lab</span>
+              Muhle Lab
             </h1>
+            {/* Subtitle */}
             <p
               className={clsx(
-                'mt-6 text-lg sm:text-xl md:text-2xl',
-                'font-light tracking-wide',
+                'text-sm md:text-base uppercase font-light tracking-wider',
                 'animate-fade-in-slow',
-                'max-w-2xl'
+                'mb-4'
               )}
             >
-              Advancing Research in Autism Spectrum Disorder
+              Molecular Genomics & Neurodevelopment
             </p>
             {children && (
               <div className="mt-8 animate-slide-down">

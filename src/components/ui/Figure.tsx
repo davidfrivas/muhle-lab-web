@@ -49,12 +49,11 @@ export function Figure({
       {caption && (
         <figcaption
           className={clsx(
-            'mt-2 text-sm text-gray-600 italic',
+            'mt-2 text-sm text-gray-600',
             captionClassName
           )}
-        >
-          {caption}
-        </figcaption>
+          dangerouslySetInnerHTML={{ __html: caption.replace(/\*(.*?)\*/g, '<i>$1</i>') }}
+        />
       )}
     </figure>
   );
