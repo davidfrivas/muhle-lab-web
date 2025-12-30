@@ -1,0 +1,76 @@
+{
+  "alumni": [
+    {
+      "name": "Arrinne Hoque",
+      "years": "2023-2025",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Nicole Pimentel Soler",
+      "years": "2023-2025",
+      "role": "Graduate Researcher",
+      "institution": "Columbia University"
+    },
+    {
+      "name": "Jeanette Marie Luna",
+      "years": "2023-2025",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Hannah Kim",
+      "years": "2022-2023",
+      "role": "Graduate Researcher",
+      "institution": "Columbia University"
+    },
+    {
+      "name": "Mahdia Begum",
+      "years": "2021-2023",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Catalina Lopez",
+      "years": "2020-2022",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Katina Pierre-Louis",
+      "years": "2020-2022",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Kaitlyn Hazzard",
+      "years": "2020-2021",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Claudia Weiss",
+      "years": "2020-2021",
+      "role": "Undergraduate Researcher",
+      "institution": "Barnard College"
+    },
+    {
+      "name": "Britt Bistis",
+      "years": "2020",
+      "role": "Undergraduate Researcher",
+      "institution": "Yale University"
+    },
+    {
+      "name": "Morgan Healey",
+      "years": "2020",
+      "role": "Undergraduate Researcher",
+      "institution": "Brown University"
+    },
+    {
+      "name": "Isabel Stobin",
+      "years": "2020",
+      "role": "High School Student",
+      "institution": ""
+    }
+  ]
+}

@@ -1,0 +1,857 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ============================================
+% MUHLE LAB CMS GUIDE
+% A comprehensive guide for managing the lab website
+% ============================================
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{tabularx}
+\usepackage{float}
+
+% ============================================
+% COLOR SCHEME (Lab Branding)
+% ============================================
+\definecolor{labdark}{HTML}{1E1926}
+\definecolor{labpurple}{HTML}{9A89B4}
+\definecolor{labdate}{HTML}{389CB7}
+\definecolor{linkblue}{HTML}{0066CC}
+\definecolor{successgreen}{HTML}{28A745}
+\definecolor{warningred}{HTML}{DC3545}
+
+% ============================================
+% HYPERREF SETTINGS
+% ============================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=labdark,
+    urlcolor=linkblue,
+    citecolor=labpurple,
+    pdftitle={Muhle Lab CMS Guide},
+    pdfauthor={Muhle Lab},
+    pdfsubject={Website Content Management},
+    pdfkeywords={TinaCMS, Next.js, Lab Website}
+}
+
+% ============================================
+% HEADER AND FOOTER
+% ============================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{labpurple}{\small Muhle Lab CMS Guide}}
+\fancyhead[R]{\textcolor{labpurple}{\small\nouppercase{\leftmark}}}
+\fancyfoot[C]{\textcolor{gray}{\thepage}}
+\fancyfoot[R]{\textcolor{gray}{\small muhlelab.org}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\setlength{\headheight}{14pt}
+
+% ============================================
+% CUSTOM BOXES
+% ============================================
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{tipbox}{
+    enhanced,
+    breakable,
+    colback=labpurple!10,
+    colframe=labpurple,
+    title={\textbf{Tip}},
+    fonttitle=\bfseries\color{white},
+    coltitle=white,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={colback=labpurple}
+}
+
+\newtcolorbox{warningbox}{
+    enhanced,
+    breakable,
+    colback=warningred!10,
+    colframe=warningred,
+    title={\textbf{Important}},
+    fonttitle=\bfseries\color{white},
+    coltitle=white,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={colback=warningred}
+}
+
+\newtcolorbox{stepbox}[1][]{
+    enhanced,
+    breakable,
+    colback=labdate!10,
+    colframe=labdate,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt,
+    #1
+}
+
+\newtcolorbox{quickref}{
+    enhanced,
+    colback=labdark!5,
+    colframe=labdark,
+    title={\textbf{Quick Reference}},
+    fonttitle=\bfseries\color{white},
+    coltitle=white,
+    attach boxed title to top center={yshift=-2mm},
+    boxed title style={colback=labdark}
+}
+
+% ============================================
+% TITLE FORMATTING
+% ============================================
+\titleformat{\section}
+{\Large\bfseries\color{labdark}}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+{\large\bfseries\color{labpurple}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalsize\bfseries\color{labdate}}{\thesubsubsection}{1em}{}
+
+\titlespacing*{\section}{0pt}{20pt}{10pt}
+\titlespacing*{\subsection}{0pt}{15pt}{8pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{5pt}
+
+% ============================================
+% DOCUMENT
+% ============================================
+\begin{document}
+
+% ============================================
+% TITLE PAGE
+% ============================================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries\textcolor{labdark}{Muhle Lab}\par}
+\vspace{0.5cm}
+{\LARGE\textcolor{labpurple}{Website Content Management Guide}\par}
+
+\vspace{1.5cm}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=labpurple!10,
+    colframe=labpurple,
+    width=0.8\textwidth,
+    arc=5mm,
+    boxrule=1pt
+]
+\centering
+\large A comprehensive guide for editing content on the Muhle Lab website using TinaCMS --- designed for researchers with no coding experience.
+\end{tcolorbox}
+
+\vspace{2cm}
+
+\begin{tabular}{ll}
+\textbf{Live Website:} & \url{https://muhlelab.org} \\[5pt]
+\textbf{Admin Panel:} & \url{https://muhlelab.org/admin} \\[5pt]
+\textbf{Repository:} & \url{https://github.com/davidfrivas/muhle-lab-web} \\
+\end{tabular}
+
+\vspace{2cm}
+
+{\large New York State Psychiatric Institute\par}
+{\large Columbia University Department of Psychiatry\par}
+
+\vfill
+
+\begin{tabular}{c}
+\hline
+\\
+{\small Version 2.0 --- \today} \\
+\\
+\hline
+\end{tabular}
+
+\end{titlepage}
+
+% ============================================
+% TABLE OF CONTENTS
+% ============================================
+\tableofcontents
+\newpage
+
+% ============================================
+% QUICK REFERENCE CARD (Page 2)
+% ============================================
+\section*{Quick Reference Card}
+\addcontentsline{toc}{section}{Quick Reference Card}
+
+\begin{multicols}{2}
+
+\subsection*{Key URLs}
+\begin{tabular}{@{}ll@{}}
+\textbf{Live Site:} & muhlelab.org \\
+\textbf{Admin:} & muhlelab.org/admin \\
+\textbf{GitHub:} & github.com/davidfrivas/muhle-lab-web \\
+\end{tabular}
+
+\vspace{10pt}
+
+\subsection*{Common Tasks}
+\begin{tabular}{@{}lp{5cm}@{}}
+\textbf{Task} & \textbf{Location} \\
+\midrule
+Add team member & Admin $\rightarrow$ Team Members \\
+Post news & Admin $\rightarrow$ News Posts \\
+Update research & Admin $\rightarrow$ Research Projects \\
+Edit lab info & Admin $\rightarrow$ Site Settings \\
+Add alumni & Admin $\rightarrow$ Alumni \\
+Update funding & Admin $\rightarrow$ Funding Sources \\
+\end{tabular}
+
+\columnbreak
+
+\subsection*{Keyboard Shortcuts}
+\begin{tabular}{@{}ll@{}}
+\textbf{Ctrl/Cmd + S} & Save \\
+\textbf{Ctrl/Cmd + B} & Bold \\
+\textbf{Ctrl/Cmd + I} & Italic \\
+\textbf{Ctrl/Cmd + K} & Insert Link \\
+\textbf{Ctrl/Cmd + Z} & Undo \\
+\textbf{Ctrl/Cmd + Shift + Z} & Redo \\
+\end{tabular}
+
+\vspace{10pt}
+
+\subsection*{Image Requirements}
+\begin{tabular}{@{}ll@{}}
+\textbf{Profile photos:} & 400$\times$400px (square) \\
+\textbf{News featured:} & 1200$\times$700px (landscape) \\
+\textbf{Banners:} & 2000$\times$800px minimum \\
+\textbf{Format:} & JPEG or PNG \\
+\textbf{Max size:} & 5MB \\
+\end{tabular}
+
+\end{multicols}
+
+\begin{quickref}
+\textbf{Display Order for Team Members:}
+\begin{multicols}{3}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item[\textbf{1}] Principal Investigator
+    \item[\textbf{2--5}] Postdocs / Senior Staff
+    \item[\textbf{6--10}] Research Assistants
+    \item[\textbf{11--20}] Graduate Students
+    \item[\textbf{21+}] Undergraduates
+\end{itemize}
+\end{multicols}
+\end{quickref}
+
+\newpage
+
+% ============================================
+% CHAPTER 1: INTRODUCTION
+% ============================================
+\section{Introduction}
+
+Welcome to the Muhle Lab website content management system. This guide will walk you through how to add, edit, and manage content on the lab website without any coding knowledge.
+
+\subsection{What is TinaCMS?}
+
+TinaCMS is a visual content management system that allows you to edit website content directly through your web browser. Think of it as a word processor for your website.
+
+\begin{tipbox}
+\textbf{No coding required!} If you can use Microsoft Word or Google Docs, you can use TinaCMS.
+\end{tipbox}
+
+\textbf{Key Benefits:}
+\begin{itemize}
+    \item \textbf{Visual Editing} --- See your changes as you make them
+    \item \textbf{Automatic Saving} --- Changes are saved to GitHub automatically
+    \item \textbf{Fast Updates} --- Website updates within 2--3 minutes of saving
+    \item \textbf{Version History} --- All changes are tracked and can be reverted
+    \item \textbf{Secure} --- Only authorized collaborators can make changes
+\end{itemize}
+
+\subsection{Getting Access}
+
+To edit the website, you need:
+\begin{enumerate}
+    \item A GitHub account (free at \url{https://github.com})
+    \item To be added as a collaborator on the repository
+\end{enumerate}
+
+\begin{warningbox}
+Contact the lab webmaster to be added as a collaborator if you don't already have access.
+\end{warningbox}
+
+\subsection{Accessing the Editor}
+
+\begin{stepbox}
+\textbf{Step 1:} Open your web browser (Chrome, Firefox, Safari, or Edge)
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 2:} Go to \textbf{\url{https://muhlelab.org/admin}}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 3:} Click \textbf{``Log in with GitHub''}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 4:} If prompted, authorize TinaCMS to access your GitHub account
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 5:} You will be redirected to the visual editor dashboard
+\end{stepbox}
+
+\newpage
+
+% ============================================
+% CHAPTER 2: NAVIGATING THE EDITOR
+% ============================================
+\section{Navigating the Editor}
+
+\subsection{The Main Dashboard}
+
+When you first log in, you'll see the main dashboard with a sidebar listing all content types:
+
+\begin{center}
+\begin{tabular}{lp{8cm}}
+\toprule
+\textbf{Content Type} & \textbf{Description} \\
+\midrule
+Team Members & Current lab members with bios and photos \\
+Alumni & Former lab members \\
+News Posts & Lab news, announcements, and events \\
+Research Projects & Research aims and ongoing projects \\
+Funding Sources & Grants and funding information \\
+Site Settings & Global website settings (logo, contact info) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Content List View}
+
+Click on any content type to see a list of existing items. From here you can:
+\begin{itemize}
+    \item \textbf{Click on an item} to edit it
+    \item \textbf{Click ``Create New''} to add a new item
+    \item \textbf{Use the search bar} to find specific items
+\end{itemize}
+
+\subsection{The Edit Form}
+
+When editing an item, you'll see a form with various fields:
+
+\begin{center}
+\begin{tabular}{lp{9cm}}
+\toprule
+\textbf{Field Type} & \textbf{How to Use} \\
+\midrule
+Text & Type a single line of text \\
+Rich Text & Formatted text with bold, italic, links, lists \\
+Image & Click to upload or select an image \\
+Date & Click to open a calendar picker \\
+Toggle & Click to switch on/off (e.g., Published) \\
+Dropdown & Click to select from options \\
+Number & Enter a numeric value \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Saving Changes}
+
+\begin{warningbox}
+Always click \textbf{``Save''} when you're done editing. Unsaved changes will be lost if you navigate away!
+\end{warningbox}
+
+After saving:
+\begin{enumerate}
+    \item Your changes are committed to GitHub automatically
+    \item The website rebuilds (takes 2--3 minutes)
+    \item Changes appear on the live site
+\end{enumerate}
+
+\newpage
+
+% ============================================
+% CHAPTER 3: MANAGING TEAM MEMBERS
+% ============================================
+\section{Managing Team Members}
+
+\subsection{Adding a New Team Member}
+
+\begin{stepbox}
+\textbf{Step 1:} Navigate to \textbf{Team Members} in the sidebar
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 2:} Click the \textbf{``Create New''} button
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 3:} Fill in the required fields:
+\begin{itemize}[noitemsep]
+    \item \textbf{Full Name} --- e.g., ``Jane Smith''
+    \item \textbf{Credentials} --- e.g., ``Ph.D.'' or leave blank
+    \item \textbf{Role} --- Select from the dropdown menu
+    \item \textbf{Profile Photo} --- Upload a square image
+    \item \textbf{Display Order} --- Number for position on page (lower = first)
+\end{itemize}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 4:} Write the biography using the rich text editor
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 5:} (Optional) Add social media links (email, Twitter, LinkedIn, etc.)
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 6:} Click \textbf{``Save''}
+\end{stepbox}
+
+\subsection{Profile Photo Requirements}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Requirement} & \textbf{Value} \\
+\midrule
+Format & JPEG or PNG \\
+Minimum Size & 400 $\times$ 400 pixels \\
+Aspect Ratio & Square (1:1) \\
+Maximum File Size & 5MB \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tipbox}
+For best results, crop photos to a square before uploading. Photos should be professional headshots with good lighting.
+\end{tipbox}
+
+\subsection{Writing Biographies}
+
+\textbf{Best Practices:}
+\begin{itemize}
+    \item Keep biographies to 1--2 paragraphs
+    \item Include educational background
+    \item Describe current research focus
+    \item Mention any personal interests (optional)
+    \item Use italics for gene names (e.g., \emph{CHD8}, \emph{Chd8})
+\end{itemize}
+
+\begin{tipbox}
+\textbf{Formatting gene names:} Highlight the gene name text and click the \emph{I} (italic) button, or press \textbf{Ctrl/Cmd + I}.
+\end{tipbox}
+
+\subsection{Display Order}
+
+The display order determines where members appear on the Team page:
+
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+\textbf{Order} & \textbf{Typical Use} \\
+\midrule
+1 & Principal Investigator \\
+2--5 & Senior staff and Postdocs \\
+6--10 & Research Assistants \\
+11--20 & Graduate Students \\
+21+ & Undergraduate Researchers \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Moving Members to Alumni}
+
+When a team member leaves the lab:
+
+\begin{enumerate}
+    \item Open their Team Members entry and note their information
+    \item Delete their Team Members entry
+    \item Go to \textbf{Alumni} and click \textbf{``Create New''}
+    \item Fill in their information, including:
+    \begin{itemize}
+        \item Years active in the lab
+        \item Their current position (if known)
+        \item Whether to feature them prominently
+    \end{itemize}
+    \item Click \textbf{``Save''}
+\end{enumerate}
+
+\newpage
+
+% ============================================
+% CHAPTER 4: PUBLISHING NEWS
+% ============================================
+\section{Publishing News}
+
+\subsection{When to Post}
+
+Good topics for lab news include:
+\begin{itemize}
+    \item Conference presentations and posters
+    \item Awards and honors
+    \item New grants and funding
+    \item New team members joining
+    \item Graduations and celebrations
+    \item Paper publications and preprints
+    \item Research milestones
+    \item Lab events and outings
+\end{itemize}
+
+\subsection{Creating a News Post}
+
+\begin{stepbox}
+\textbf{Step 1:} Navigate to \textbf{News Posts} in the sidebar
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 2:} Click \textbf{``Create New''}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 3:} Fill in the basic information:
+\begin{itemize}[noitemsep]
+    \item \textbf{Title} --- Clear, descriptive (e.g., ``INSAR 2024 Conference'')
+    \item \textbf{Publication Date} --- When to show the post
+    \item \textbf{Featured Image} --- Main image for the post
+    \item \textbf{Image Description} --- Alt text for accessibility
+\end{itemize}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 4:} Write the post content using the rich text editor
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 5:} (Optional) Add carousel images for events with multiple photos
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 6:} Set publishing options:
+\begin{itemize}[noitemsep]
+    \item Check \textbf{``Published''} to make visible on the site
+    \item Check \textbf{``Featured on Homepage''} to show in the latest news section
+\end{itemize}
+\end{stepbox}
+
+\begin{stepbox}
+\textbf{Step 7:} Click \textbf{``Save''}
+\end{stepbox}
+
+\subsection{Image Guidelines}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Image Type} & \textbf{Recommended Size} & \textbf{Orientation} \\
+\midrule
+Featured Image & 1200 $\times$ 700 pixels & Landscape \\
+Carousel Images & 800 $\times$ 800 pixels & Square \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tipbox}
+Include people in your images when possible --- they're more engaging than text or logos alone!
+\end{tipbox}
+
+\subsection{Image Carousels}
+
+For events with multiple photos (conferences, parties, etc.):
+
+\begin{enumerate}
+    \item Scroll to the \textbf{``Image Carousel''} section
+    \item Click \textbf{``Add Image''} for each photo
+    \item Upload the image
+    \item Add a description for each image
+    \item Repeat for all photos (5--10 maximum recommended)
+\end{enumerate}
+
+\newpage
+
+% ============================================
+% CHAPTER 5: RESEARCH & FUNDING
+% ============================================
+\section{Research \& Funding}
+
+\subsection{Research Projects}
+
+Each research project on the Research page includes:
+
+\begin{center}
+\begin{tabular}{lp{8cm}}
+\toprule
+\textbf{Field} & \textbf{Description} \\
+\midrule
+Heading & The research question or aim title \\
+Description & Rich text explaining the research \\
+Figure & Supporting image with caption \\
+Layout & Image position (left or right of text) \\
+Order & Position on the page \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tipbox}
+Alternate the layout (image left, then image right) for a more visually interesting page.
+\end{tipbox}
+
+\subsection{Funding Sources}
+
+Each funding entry includes:
+
+\begin{center}
+\begin{tabular}{lp{8cm}}
+\toprule
+\textbf{Field} & \textbf{Description} \\
+\midrule
+Project Title & Official grant title \\
+Program Title & Funding program name \\
+Funding Source & Organization name (NIH, NIMH, etc.) \\
+Logo & Organization logo image \\
+Principal Investigator & PI name \\
+Description & Grant description and goals \\
+Status & Active or Past \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tipbox}
+Past funding automatically appears in a separate ``Past Funding'' section at the bottom of the Funding page.
+\end{tipbox}
+
+\newpage
+
+% ============================================
+% CHAPTER 6: SITE SETTINGS
+% ============================================
+\section{Site Settings}
+
+Access global settings via \textbf{Admin $\rightarrow$ Site Settings}.
+
+\subsection{Lab Information}
+
+\begin{itemize}
+    \item \textbf{Lab Name} --- Displayed in header and footer
+    \item \textbf{Tagline} --- Appears on homepage banner
+    \item \textbf{Mission Statement} --- Homepage section content
+\end{itemize}
+
+\subsection{Contact Information}
+
+\begin{itemize}
+    \item \textbf{Email} --- Contact email for the lab
+    \item \textbf{Address} --- Physical location
+    \item \textbf{Form Endpoint} --- FormSubmit.co endpoint URL
+\end{itemize}
+
+\subsection{Banner Images}
+
+Each page can have its own banner image:
+
+\begin{itemize}
+    \item Home page banner
+    \item Team page banner
+    \item Research page banner
+    \item News page banner
+    \item Contact page banner
+\end{itemize}
+
+\textbf{Recommended banner size:} 2000 $\times$ 800 pixels minimum
+
+\newpage
+
+% ============================================
+% CHAPTER 7: FORMATTING TEXT
+% ============================================
+\section{Formatting Text}
+
+\subsection{Basic Formatting}
+
+The rich text editor supports:
+
+\begin{center}
+\begin{tabular}{llc}
+\toprule
+\textbf{Format} & \textbf{How to Apply} & \textbf{Shortcut} \\
+\midrule
+Bold & Click \textbf{B} button & Ctrl/Cmd + B \\
+Italic & Click \emph{I} button & Ctrl/Cmd + I \\
+Heading & Select from dropdown & --- \\
+Bullet List & Click bullet icon & --- \\
+Numbered List & Click number icon & --- \\
+Link & Click link icon & Ctrl/Cmd + K \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Creating Links}
+
+\begin{enumerate}
+    \item Highlight the text you want to link
+    \item Click the link icon in the toolbar (or press Ctrl/Cmd + K)
+    \item Enter the full URL (including \texttt{https://})
+    \item Click \textbf{``Add''} or press Enter
+\end{enumerate}
+
+\subsection{Internal Links}
+
+For links to other pages on the Muhle Lab website, use relative paths:
+
+\begin{center}
+\begin{tabular}{ll}
+\texttt{/contact} & Links to the Contact page \\
+\texttt{/news} & Links to the News page \\
+\texttt{/team} & Links to the Team page \\
+\texttt{/research} & Links to the Research page \\
+\end{tabular}
+\end{center}
+
+\subsection{Gene Names}
+
+Scientific convention requires gene names to be italicized:
+
+\begin{itemize}
+    \item Human genes: \emph{CHD8}, \emph{ARID1B}
+    \item Mouse genes: \emph{Chd8}, \emph{Arid1b}
+\end{itemize}
+
+To italicize: highlight the gene name and press \textbf{Ctrl/Cmd + I}.
+
+\newpage
+
+% ============================================
+% CHAPTER 8: TROUBLESHOOTING
+% ============================================
+\section{Troubleshooting}
+
+\subsection{Common Issues}
+
+\begin{center}
+\begin{longtable}{p{4cm}p{8cm}}
+\toprule
+\textbf{Problem} & \textbf{Solution} \\
+\midrule
+\endhead
+Can't log in & Verify you're a repository collaborator. Contact the webmaster to be added. \\
+\midrule
+Changes not showing & Wait 2--3 minutes for the site to rebuild. Try refreshing with Ctrl/Cmd + Shift + R. \\
+\midrule
+Build failed & Check GitHub Actions tab for error details. Usually caused by missing required fields. \\
+\midrule
+Image won't upload & Compress the image, check the format (JPEG/PNG only), and try renaming the file. \\
+\midrule
+Formatting looks wrong & Clear the formatting and reapply it. Avoid copying from Word. \\
+\midrule
+Site is down & Contact the webmaster immediately. \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Checking Build Status}
+
+To see if your changes are live:
+
+\begin{enumerate}
+    \item Go to the GitHub repository
+    \item Click the \textbf{``Actions''} tab
+    \item Look for the most recent workflow run
+    \item Green checkmark = success (changes are live)
+    \item Yellow circle = in progress (wait a moment)
+    \item Red X = failed (click for details)
+\end{enumerate}
+
+\subsection{Getting Help}
+
+\begin{itemize}
+    \item \textbf{Lab Webmaster} --- For most issues and access requests
+    \item \textbf{GitHub Issues} --- Open an issue on the repository for bugs
+    \item \textbf{TinaCMS Docs} --- \url{https://tina.io/docs/}
+    \item \textbf{Documentation} --- Check the \texttt{docs/} folder in the repository
+\end{itemize}
+
+\newpage
+
+% ============================================
+% APPENDIX A: KEYBOARD SHORTCUTS
+% ============================================
+\appendix
+\section{Keyboard Shortcuts}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+Ctrl/Cmd + S & Save changes \\
+Ctrl/Cmd + B & Bold text \\
+Ctrl/Cmd + I & Italic text \\
+Ctrl/Cmd + K & Insert link \\
+Ctrl/Cmd + Z & Undo \\
+Ctrl/Cmd + Shift + Z & Redo \\
+Ctrl/Cmd + Shift + R & Hard refresh browser \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ============================================
+% APPENDIX B: RESOURCES
+% ============================================
+\section{Resources}
+
+\subsection{Quick Links}
+
+\begin{itemize}
+    \item \textbf{Live Website:} \url{https://muhlelab.org}
+    \item \textbf{Admin Panel:} \url{https://muhlelab.org/admin}
+    \item \textbf{GitHub Repository:} \url{https://github.com/davidfrivas/muhle-lab-web}
+    \item \textbf{TinaCMS Dashboard:} \url{https://app.tina.io}
+\end{itemize}
+
+\subsection{Documentation}
+
+All documentation is available in the \texttt{docs/} folder:
+
+\begin{itemize}
+    \item \texttt{GETTING\_STARTED.md} --- First-time setup
+    \item \texttt{ADDING\_TEAM\_MEMBERS.md} --- Team member guide
+    \item \texttt{PUBLISHING\_NEWS.md} --- News posting guide
+    \item \texttt{EDITING\_CONTENT.md} --- General editing tips
+    \item \texttt{TROUBLESHOOTING.md} --- Common issues
+    \item \texttt{CUSTOMIZATION\_GUIDE.md} --- For other labs using this template
+\end{itemize}
+
+\vfill
+
+\begin{center}
+\rule{0.5\textwidth}{0.5pt}
+
+\vspace{10pt}
+
+{\large\textbf{Muhle Lab}}
+
+New York State Psychiatric Institute
+
+Columbia University Department of Psychiatry
+
+\vspace{10pt}
+
+\textcolor{gray}{\small This guide was created for non-technical researchers to easily manage lab website content.}
+\end{center}
+
+\end{document}
