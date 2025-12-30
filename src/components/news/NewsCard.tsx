@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import clsx from 'clsx';
 import { withBasePath } from '@/lib/utils';
 
@@ -39,7 +40,7 @@ export function NewsCard({
   const imgAlt = featuredImageAlt || imageAlt || title;
   return (
     <article className={clsx('group', className)}>
-      <a href={`/news/${slug}`} className="block">
+      <Link href={`/news/${slug}`} className="block">
         {/* Image with aspect ratio */}
         <div className="relative overflow-hidden aspect-news mb-4">
           <img
@@ -69,7 +70,7 @@ export function NewsCard({
             {excerpt}
           </p>
         )}
-      </a>
+      </Link>
     </article>
   );
 }

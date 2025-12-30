@@ -1,5 +1,6 @@
 import { PageBanner, ResearchOverview, ResearchProject } from '@/components'
 import { getAllResearchProjects, getResearchOverview, getGlobalSettings } from '@/lib/content'
+import { withBasePath } from '@/lib/utils'
 
 export const metadata = {
   title: 'Research',
@@ -10,6 +11,12 @@ export const metadata = {
 // Simple markdown to HTML conversion for italics and superscript
 function processMarkdown(text: string): string {
   return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, linkText, url) => {
+      if (url.startsWith('/')) {
+        return `<a href="${withBasePath(url)}">${linkText}</a>`
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`
+    }) // [text](url) links
     .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><i>$1</i></strong>') // ***bold italic***
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
     .replace(/\*(.*?)\*/g, '<i>$1</i>') // *italic*

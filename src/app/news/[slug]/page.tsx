@@ -7,7 +7,14 @@ import { withBasePath } from '@/lib/utils'
 // Convert markdown to HTML
 function processMarkdown(text: string): string {
   return text
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>') // [text](url) links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, linkText, url) => {
+      // Check if it's an internal link (starts with /)
+      if (url.startsWith('/')) {
+        return `<a href="${withBasePath(url)}">${linkText}</a>`
+      }
+      // External link
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`
+    }) // [text](url) links
     .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>') // ***bold italic***
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
     .replace(/\*(.*?)\*/g, '<em>$1</em>') // *italic*
