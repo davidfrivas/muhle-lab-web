@@ -1,5 +1,5 @@
-import { client } from '@/tina/__generated__/client'
 import { PageBanner, ContactForm } from '@/components'
+import { getGlobalSettings } from '@/lib/content'
 
 export const metadata = {
   title: 'Contact',
@@ -7,11 +7,7 @@ export const metadata = {
 }
 
 export default async function ContactPage() {
-  // Fetch global settings
-  const globalResponse = await client.queries.global({
-    relativePath: 'settings.json',
-  })
-  const global = globalResponse.data.global
+  const global = getGlobalSettings()
 
   const address = global?.address
   const mapEmbedUrl = global?.map?.embedUrl

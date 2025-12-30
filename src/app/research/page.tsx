@@ -1,5 +1,5 @@
-import { client } from '@/tina/__generated__/client'
 import { PageBanner, ResearchOverview, ResearchProject } from '@/components'
+import { getAllResearchProjects, getResearchOverview, getGlobalSettings } from '@/lib/content'
 
 export const metadata = {
   title: 'Research',
@@ -8,37 +8,9 @@ export const metadata = {
 }
 
 export default async function ResearchPage() {
-  // Fetch global settings for banner image
-  const globalResponse = await client.queries.global({
-    relativePath: 'settings.json',
-  })
-  const global = globalResponse.data.global
-
-  // Fetch research overview
-  let researchOverview = null
-  try {
-    const overviewResponse = await client.queries.researchOverview({
-      relativePath: 'overview.mdx',
-    })
-    researchOverview = overviewResponse.data.researchOverview
-  } catch {
-    // Overview may not exist yet
-  }
-
-  // Fetch all research projects
-  const researchResponse = await client.queries.researchConnection({
-    sort: 'order',
-  })
-  const allProjects = researchResponse.data.researchConnection.edges || []
-
-  // Filter active projects and sort by order
-  const activeProjects = [...allProjects]
-    .filter((edge) => edge?.node?.isActive !== false)
-    .sort((a, b) => {
-      const orderA = a?.node?.order ?? 999
-      const orderB = b?.node?.order ?? 999
-      return orderA - orderB
-    })
+  const global = getGlobalSettings()
+  const researchOverview = getResearchOverview()
+  const activeProjects = getAllResearchProjects()
 
   return (
     <>
@@ -56,7 +28,7 @@ export default async function ResearchPage() {
               {researchOverview.title || 'Research Goals'}
             </h2>
             <ResearchOverview
-              content={researchOverview.content}
+              content={<div dangerouslySetInnerHTML={{ __html: researchOverview.content.replace(/\n/g, '<br/>') }} />}
               figures={researchOverview.figures}
             />
             <hr className="page-break" />
@@ -68,24 +40,19 @@ export default async function ResearchPage() {
           Research Projects
         </h2>
 
-        {activeProjects.map((edge, index) => {
-          const project = edge?.node
-          if (!project) return null
-
-          return (
-            <div key={project._sys.filename}>
-              <ResearchProject
-                heading={project.heading}
-                description={project.description}
-                figure={project.figure}
-                layout={project.layout as 'image-left' | 'image-right'}
-              />
-              {index < activeProjects.length - 1 && (
-                <hr className="my-12 border-t border-gray-300" />
-              )}
-            </div>
-          )
-        })}
+        {activeProjects.map((project, index) => (
+          <div key={project._sys.filename}>
+            <ResearchProject
+              heading={project.heading}
+              description={<div dangerouslySetInnerHTML={{ __html: project.description.replace(/\n/g, '<br/>') }} />}
+              figure={project.figure}
+              layout={project.layout}
+            />
+            {index < activeProjects.length - 1 && (
+              <hr className="my-12 border-t border-gray-300" />
+            )}
+          </div>
+        ))}
       </div>
     </>
   )

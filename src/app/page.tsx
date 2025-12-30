@@ -1,6 +1,6 @@
-import { client } from '@/tina/__generated__/client'
 import Link from 'next/link'
 import { PageBanner, NewsCard } from '@/components'
+import { getAllNewsPosts, getGlobalSettings } from '@/lib/content'
 
 export const metadata = {
   title: 'Muhle Lab',
@@ -9,20 +9,12 @@ export const metadata = {
 }
 
 export default async function HomePage() {
-  // Fetch global settings
-  const globalResponse = await client.queries.global({
-    relativePath: 'settings.json',
-  })
-  const global = globalResponse.data.global
+  const global = getGlobalSettings()
+  const allNews = getAllNewsPosts()
 
-  // Fetch featured news posts
-  const newsResponse = await client.queries.newsConnection({
-    sort: 'date',
-    last: 10,
-  })
-  const allNews = newsResponse.data.newsConnection.edges || []
+  // Get featured news posts
   const featuredNews = allNews
-    .filter((edge) => edge?.node?.featured && edge?.node?.published)
+    .filter((post) => post.featured && post.published !== false)
     .slice(0, 2)
 
   return (
@@ -82,20 +74,16 @@ export default async function HomePage() {
                 Latest News
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                {featuredNews.map((edge) => {
-                  const post = edge?.node
-                  if (!post) return null
-                  return (
-                    <NewsCard
-                      key={post._sys.filename}
-                      slug={post._sys.filename}
-                      title={post.title}
-                      date={post.date}
-                      featuredImage={post.featuredImage}
-                      featuredImageAlt={post.featuredImageAlt}
-                    />
-                  )
-                })}
+                {featuredNews.map((post) => (
+                  <NewsCard
+                    key={post._sys.filename}
+                    slug={post._sys.filename}
+                    title={post.title}
+                    date={post.date}
+                    featuredImage={post.featuredImage}
+                    featuredImageAlt={post.featuredImageAlt}
+                  />
+                ))}
               </div>
               <Link href="/news" className="btn btn-outline inline-block">
                 See all news

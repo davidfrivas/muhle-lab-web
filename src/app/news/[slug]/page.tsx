@@ -1,7 +1,7 @@
-import { client } from '@/tina/__generated__/client'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { PageBanner, NewsPostContent, ImageCarousel } from '@/components'
+import { PageBanner, ImageCarousel } from '@/components'
+import { getNewsPost, getNewsSlugs } from '@/lib/content'
 
 interface NewsPostPageProps {
   params: Promise<{
@@ -10,51 +10,32 @@ interface NewsPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const newsResponse = await client.queries.newsConnection()
-  const allNews = newsResponse.data.newsConnection.edges || []
-
-  return allNews
-    .filter((edge) => edge?.node)
-    .map((edge) => ({
-      slug: edge!.node!._sys.filename,
-    }))
+  const slugs = getNewsSlugs()
+  return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({
   params,
 }: NewsPostPageProps): Promise<Metadata> {
   const { slug } = await params
+  const post = getNewsPost(slug)
 
-  try {
-    const response = await client.queries.news({
-      relativePath: `${slug}.mdx`,
-    })
-    const post = response.data.news
-
-    return {
-      title: post.title,
-      description: post.excerpt || `${post.title} - Muhle Lab News`,
-    }
-  } catch {
+  if (!post) {
     return {
       title: 'News Post',
       description: 'Muhle Lab News',
     }
   }
+
+  return {
+    title: post.title,
+    description: post.excerpt || `${post.title} - Muhle Lab News`,
+  }
 }
 
 export default async function NewsPostPage({ params }: NewsPostPageProps) {
   const { slug } = await params
-
-  let post
-  try {
-    const response = await client.queries.news({
-      relativePath: `${slug}.mdx`,
-    })
-    post = response.data.news
-  } catch {
-    notFound()
-  }
+  const post = getNewsPost(slug)
 
   if (!post) {
     notFound()
@@ -92,9 +73,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             )}
 
             {/* Post Content */}
-            <div className="prose-lab">
-              <NewsPostContent content={post.body} />
-            </div>
+            <div className="prose-lab" dangerouslySetInnerHTML={{ __html: post.body.replace(/\n/g, '<br/>') }} />
 
             {/* Image Carousel */}
             {post.carousel && post.carousel.length > 0 && (

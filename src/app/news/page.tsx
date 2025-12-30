@@ -1,5 +1,5 @@
-import { client } from '@/tina/__generated__/client'
 import { PageBanner, NewsCard } from '@/components'
+import { getAllNewsPosts, getGlobalSettings } from '@/lib/content'
 
 export const metadata = {
   title: 'News',
@@ -7,27 +7,11 @@ export const metadata = {
 }
 
 export default async function NewsPage() {
-  // Fetch global settings for banner image
-  const globalResponse = await client.queries.global({
-    relativePath: 'settings.json',
-  })
-  const global = globalResponse.data.global
+  const global = getGlobalSettings()
+  const allNews = getAllNewsPosts()
 
-  // Fetch all news posts
-  const newsResponse = await client.queries.newsConnection({
-    sort: 'date',
-    last: 100,
-  })
-  const allNews = newsResponse.data.newsConnection.edges || []
-
-  // Filter published posts and sort by date (newest first)
-  const publishedNews = [...allNews]
-    .filter((edge) => edge?.node?.published !== false)
-    .sort((a, b) => {
-      const dateA = a?.node?.date ? new Date(a.node.date).getTime() : 0
-      const dateB = b?.node?.date ? new Date(b.node.date).getTime() : 0
-      return dateB - dateA
-    })
+  // Filter published posts
+  const publishedNews = allNews.filter((post) => post.published !== false)
 
   return (
     <>
@@ -44,21 +28,16 @@ export default async function NewsPage() {
               Latest News
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {publishedNews.map((edge) => {
-                const post = edge?.node
-                if (!post) return null
-
-                return (
-                  <NewsCard
-                    key={post._sys.filename}
-                    slug={post._sys.filename}
-                    title={post.title}
-                    date={post.date}
-                    featuredImage={post.featuredImage}
-                    featuredImageAlt={post.featuredImageAlt}
-                  />
-                )
-              })}
+              {publishedNews.map((post) => (
+                <NewsCard
+                  key={post._sys.filename}
+                  slug={post._sys.filename}
+                  title={post.title}
+                  date={post.date}
+                  featuredImage={post.featuredImage}
+                  featuredImageAlt={post.featuredImageAlt}
+                />
+              ))}
             </div>
           </div>
         </div>
