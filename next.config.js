@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+
 const nextConfig = {
   // Only use static export for production builds
   ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
@@ -6,9 +8,9 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  // Ensure static export works with GitHub Pages
-  basePath: '',
-  assetPrefix: '',
+  // Set basePath for GitHub Pages (repo is not at root domain)
+  basePath: isGitHubPages ? '/muhle-lab-web' : '',
+  assetPrefix: isGitHubPages ? '/muhle-lab-web' : '',
   // Rewrites for development mode (to serve admin panel)
   async rewrites() {
     return [
