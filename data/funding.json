@@ -1,0 +1,78 @@
+{
+  "currentFunding": [
+    {
+      "title": "Impact of Loss of the Autism Risk Gene <i>CHD8</i> On Expression",
+      "programTitle": "The Investigator Initiated Research Grant",
+      "fundingSource": "NIMH",
+      "fundingSourceUrl": "https://www.nimh.nih.gov/",
+      "pi": "Rebecca Muhle, MD Ph.D",
+      "copi": "",
+      "description": "The overall objective of this proposal is to elucidate the mechanisms whereby <i>CHD8</i> genetic mutations affect cells and pathways critical for core symptoms of ASD and other neurodevelopmental disorders, by integrating state-of-the-art single nuclear transcriptomics and cell type specific functional genomics with electrophysiologic and behavioral probing of animal models with a loss of <i>CHD8</i> expression.",
+      "logo": "../images/nimh-logo.png",
+      "logoAlt": "NIMH logo",
+      "logoClass": "nimh"
+    },
+    {
+      "title": "Identifying Developmental Pathways that Regulate ASD Risk Networks",
+      "programTitle": "Bridge to Independence",
+      "fundingSource": "Simons Foundation for Autism Research Initiative (SFARI)",
+      "fundingSourceUrl": "https://www.sfari.org/",
+      "pi": "Rebecca Muhle, MD Ph.D",
+      "copi": "",
+      "description": "The major goal of this project is to define the molecular and cellular phenotypes and to identify the upstream factors that affect the regulatory networks of genes and pathways associated with autism risk.",
+      "logo": "../images/SFARI_Logo_2.jpeg",
+      "logoAlt": "Simons Foundation for Autism Research Initiative logo",
+      "logoClass": "sfari"
+    },
+    {
+      "title": "Characterization of novel phenotypes resulting from loss of the autism risk gene <i>CHD8</i>",
+      "programTitle": "Louis V. Gerstner, Jr. Scholars Program",
+      "fundingSource": "Columbia Vagelos College of Physicians and Surgeons",
+      "fundingSourceUrl": "https://www.vagelos.columbia.edu/",
+      "pi": "Rebecca Muhle, MD Ph.D",
+      "copi": "",
+      "description": "The goals of this project are to assess the rate and progression of abnormal brain electrical activity in people carrying disruptive genetic variants in <i>CHD8</i> and to determine the molecular and electrographic mechanisms of reduced response to dopaminergic agents in <i>CHD8</i> mutant mice.",
+      "logo": "../images/columbia-vagelos-logo.svg",
+      "logoAlt": "Columbia Vagelos College of Physicians and Surgeons logo",
+      "logoClass": ""
+    },
+    {
+      "title": "Prospective Genetic Risk Evaluation and Assessment (PROGRESS) in Autism",
+      "programTitle": "Autism Center of Excellence Award",
+      "fundingSource": "NICHD",
+      "fundingSourceUrl": "https://www.nichd.nih.gov/",
+      "pi": "Wendy Chung, MD; Jeremy Veenstra-VanderWeele, MD",
+      "copi": "Rebecca Muhle, MD Ph.D",
+      "description": "The goal of the Autism Center grant is to identify and study a diverse, population-based cohort of infants with monogenic risk for autism to evaluate the impact of early life identification of genomic risk variants on parent experience, neurodevelopmental trajectories, and prediction of autism diagnosis.",
+      "logo": "../images/NICHD_logo.svg",
+      "logoAlt": "NICHD logo",
+      "logoClass": ""
+    },
+    {
+      "title": "Research Education in Child Psychiatry Residency",
+      "programTitle": "NIMH Research Education Program",
+      "fundingSource": "NIMH",
+      "fundingSourceUrl": "https://www.nimh.nih.gov/",
+      "pi": "Jeremy Veenstra-VanderWeele, MD",
+      "copi": "Rebecca Muhle, MD Ph.D",
+      "description": "The major goal of this project is to improve recruitment, retention, and training of Child Psychiatry research trainees.",
+      "logo": "../images/nimh-logo.png",
+      "logoAlt": "NIMH logo",
+      "logoClass": "nimh"
+    }
+  ],
+  "pastFunding": [
+    {
+      "title": "Mapping Regulatory Networks of Autism Risk at Cellular Resolution during Neurodevelopment",
+      "programTitle": "Mentored Clinical Scientist Research Career Development Award",
+      "fundingSource": "NIH",
+      "fundingSourceUrl": "https://www.nih.gov/",
+      "pi": "Rebecca Muhle, MD Ph.D",
+      "copi": "",
+      "description": "The major goal of this project is to determine the developmental signaling pathways upstream of ASD risk genes expression, and the regulatory networks of genes and pathways downstream of ASD risk gene expression during neurodevelopment.",
+      "logo": "../images/nih-logo-color.png",
+      "logoAlt": "NIH logo",
+      "logoClass": "vagelos"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+prose:
+  # Root folder to start in
+  rooturl: 'pages'
+  
+  # URL of the live site
+  siteurl: 'https://davidfrivas.github.io/muhle-lab-web/'
+  
+  # Where uploaded media files go
+  media: 'images'
+  
+  # Files and folders to ignore/hide in Prose.io
+  ignore:
+    - .gitignore
+    - CNAME
+    - README.md
+    - _prose.yml
+    - index.html
+    - index-updated.html
+    - nav.js
+    - style.css
+    - sitemap.xml
+    - icons
+    - _site
+    - .git
+  
+  # Metadata templates for different content types
+  metadata:
+    # News posts
+    pages/news:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post Title"
+          placeholder: "Enter the title of your news post"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Publication Date"
+          placeholder: "e.g., 15 January 2025"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "news-post"

@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "title": "2023 SRI Poster Session",
+      "date": "2 August 2023",
+      "image": "../images/2023-sri.jpg",
+      "url": "./news/2023-sri-poster-session",
+      "alt": "Muhle Lab at Barnard College 2023 SRI poster session"
+    },
+    {
+      "title": "2023 Graduation Party",
+      "date": "11 May 2023",
+      "image": "../images/baylander-steel-beach.jpg",
+      "url": "./news/2023-graduation-party",
+      "alt": "Baylander Steel Beach restaurant"
+    },
+    {
+      "title": "Muhle Lab Attends INSAR 2023",
+      "date": "5 May 2023",
+      "image": "../images/insar-2023.jpg",
+      "url": "./news/insar-2023",
+      "alt": "Muhle Lab in Stockholm, Sweden"
+    },
+    {
+      "title": "Dr. Muhle Attends WCPG in Florence",
+      "date": "13 September 2022",
+      "image": "../images/florence.jpg",
+      "url": "./news/wcpg-2022",
+      "alt": "photo of Florence, Italy"
+    },
+    {
+      "title": "2022 SRI Poster Session",
+      "date": "3 August 2022",
+      "image": "../images/2022-sri.jpg",
+      "url": "./news/2022-sri-poster-session",
+      "alt": "group picture of Muhle lab students at Barnard College 2022 SRI poster session"
+    },
+    {
+      "title": "Farewell to Yun-Kyung",
+      "date": "24 June 2022",
+      "image": "../images/rebecca-yk.jpg",
+      "url": "./news/farewell-to-yk",
+      "alt": "photo of Rebecca Muhle and Yun-Kyung Kim"
+    },
+    {
+      "title": "Dr. Muhle Selected as a Gerstner Scholar",
+      "date": "8 February 2022",
+      "image": "../images/columbia-logo.png",
+      "url": "./news/gerstner-scholar",
+      "alt": "Columbia University logo",
+      "extraClass": "columbia"
+    }
+  ]
+}

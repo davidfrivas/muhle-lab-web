@@ -48,88 +48,8 @@
                 </div>
             </div>
 
-            <div class="wrapper page-content">
-                <div class="lab-member">
-                    <div class="member-summary">
-                        <h2>Rebecca Muhle<br>M.D., Ph.D.</h2>
-                        <h3>Principal Investigator</h3>
-                        <p>Dr. Muhle earned her medical and graduate degrees
-                        from the Medical Scientist Training Program at the
-                        Albert Einstein College of Medicine, and completed her
-                        adult psychiatry residency and child & adolescent
-                        fellowship training within the Solnit Integrated Adult
-                        and Child & Adolescent Psychiatry Research Training
-                        Program at the Yale University Child Study Center. Dr.
-                        Muhle's scientific research aims to uncover molecular
-                        genetic pathways that increase the likelihood of
-                        neurodevelopmental disorders such as autism, by
-                        utilizing high-throughput genomics methods in mouse and
-                        human model systems to examine the effects of
-                        disruptions of implicated genes. She is a
-                        board-certified general and child & adolescent
-                        psychiatrist. When not in the clinic or the lab, she
-                        enjoys concerts, playing fetch with the dog and
-                        “fishing” with the cat.
-                        </p>
-                    </div>
-                    <img
-                    src="../images/rebecca-muhle.jpeg" alt="picture of Rebecca
-                    Muhle, MD, PhD">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member even">
-                    <div class="member-summary">
-                        <h2>David Rivas</h2>
-                        <h3>Research Assistant</h3>
-                        <p>David joined the Muhle lab in December 2019 as a Research Assistant. His roles include conducting animal behavior, electroencephalography (EEG), computational analyses, histology, and laboratory/mouse colony management. Specifically, his work is focused on characterizing the behavior phenotype and associated brain circuitry of <i>Chd8</i><sup>+/-</sup> mice. He is developing an automated approach to sleep stage classification from mouse EEG data by implementing supervised machine learning and deep learning models.
-                        </p>
-                        <a class="linkedin" href="https://www.linkedin.com/in/david-f-rivas/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                        <a class="github" href="https://github.com/davidfrivas" target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </div>
-                    <img src="../images/david-rivas.jpeg" alt="picture of David Rivas">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member">
-                    <div class="member-summary">
-                        <h2>Esther Garfield</h2>
-                        <h3>Research Assistant</h3>
-                        <p>Esti received a B.A. in Neuroscience and Behavior at Barnard College. She initially joined the Muhle lab in
-                        Fall 2021 as an undergraduate researcher.
-                        Her research explores
-                        differential gene expression associated with <i>Chd8</i>
-                        haploinsufficiency in mice. In her free time, Esti
-                        enjoys reading fiction and crocheting hats.
-                        </p>
-                    </div>
-                    <img src="../images/esti.jpg"
-                    alt="picture of Esther Mager Garfield">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member even">
-                    <div class="member-summary">
-                        <h2>Artemis Christoforatos</h2>
-                        <h3>Undergraduate Researcher</h3>
-                        <p>Artemis is a senior at Barnard College studying Neuroscience and Behavior. Her work involves conducting animal behavior and histological analysis to investigate the link between behavioral phenotypes and structural differences in the brain physiology of <i>Chd8</i><sup>+/-</sup> mice.
-                        </p>
-                    </div>
-                    <img src="../images/artemis.jpeg"
-                    alt="picture of Artemis Christoforatos">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member">
-                    <div class="member-summary">
-                        <h2>Reina Barua</h2>
-                        <h3>Undergraduate Researcher</h3>
-                        <p>Reina is a student at Columbia University studying Sociology. Her work employs histological and computational analyses using computer vision to investigate the brain circuitry of <i>Chd8</i><sup>+/-</sup> mice.
-                        </p>
-                    </div>
-                    <img src="../images/reena.jpeg"
-                    alt="picture of Reena Barua">
-                </div>
+            <div class="wrapper page-content" id="team-container">
+                <!-- Team members will be loaded here by JavaScript -->
             </div>
 
             <a class="team-alumni-link" href="./alumni">
@@ -168,5 +88,58 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+        <script>
+            // Load team members from JSON file
+            fetch('../data/team.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('team-container');
+                    
+                    data.members.forEach((member, index) => {
+                        const memberDiv = document.createElement('div');
+                        memberDiv.className = index % 2 === 0 ? 'lab-member' : 'lab-member even';
+                        
+                        // Build the name with credentials
+                        const fullName = member.credentials 
+                            ? `${member.name}<br>${member.credentials}` 
+                            : member.name;
+                        
+                        // Build social links if they exist
+                        let socialLinks = '';
+                        member.links.forEach(link => {
+                            socialLinks += `
+                                <a class="${link.type}" href="${link.url}" target="_blank">
+                                    <ion-icon name="${link.icon}"></ion-icon>
+                                </a>
+                            `;
+                        });
+                        
+                        memberDiv.innerHTML = `
+                            <div class="member-summary">
+                                <h2>${fullName}</h2>
+                                <h3>${member.title}</h3>
+                                <p>${member.bio}</p>
+                                ${socialLinks}
+                            </div>
+                            <img src="${member.image}" alt="${member.alt}">
+                        `;
+                        
+                        container.appendChild(memberDiv);
+                        
+                        // Add horizontal rule between members (except after last)
+                        if (index < data.members.length - 1) {
+                            const hr = document.createElement('hr');
+                            hr.className = 'page-break';
+                            container.appendChild(hr);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading team members:', error);
+                    document.getElementById('team-container').innerHTML = 
+                        '<p>Unable to load team members. Please try again later.</p>';
+                });
+        </script>
     </body>
 </html>

@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Rebecca Muhle",
+      "credentials": "M.D., Ph.D.",
+      "title": "Principal Investigator",
+      "bio": "Dr. Muhle earned her medical and graduate degrees from the Medical Scientist Training Program at the Albert Einstein College of Medicine, and completed her adult psychiatry residency and child & adolescent fellowship training within the Solnit Integrated Adult and Child & Adolescent Psychiatry Research Training Program at the Yale University Child Study Center. Dr. Muhle's scientific research aims to uncover molecular genetic pathways that increase the likelihood of neurodevelopmental disorders such as autism, by utilizing high-throughput genomics methods in mouse and human model systems to examine the effects of disruptions of implicated genes. She is a board-certified general and child & adolescent psychiatrist. When not in the clinic or the lab, she enjoys concerts, playing fetch with the dog and \"fishing\" with the cat.",
+      "image": "../images/rebecca-muhle.jpeg",
+      "alt": "picture of Rebecca Muhle, MD, PhD",
+      "links": []
+    },
+    {
+      "name": "David Rivas",
+      "credentials": "",
+      "title": "Research Assistant",
+      "bio": "David joined the Muhle lab in December 2019 as a Research Assistant. His roles include conducting animal behavior, electroencephalography (EEG), computational analyses, histology, and laboratory/mouse colony management. Specifically, his work is focused on characterizing the behavior phenotype and associated brain circuitry of <i>Chd8</i><sup>+/-</sup> mice. He is developing an automated approach to sleep stage classification from mouse EEG data by implementing supervised machine learning and deep learning models.",
+      "image": "../images/david-rivas.jpeg",
+      "alt": "picture of David Rivas",
+      "links": [
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/david-f-rivas/",
+          "icon": "logo-linkedin"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/davidfrivas",
+          "icon": "logo-github"
+        }
+      ]
+    },
+    {
+      "name": "Esther Garfield",
+      "credentials": "",
+      "title": "Research Assistant",
+      "bio": "Esti received a B.A. in Neuroscience and Behavior at Barnard College. She initially joined the Muhle lab in Fall 2021 as an undergraduate researcher. Her research explores differential gene expression associated with <i>Chd8</i> haploinsufficiency in mice. In her free time, Esti enjoys reading fiction and crocheting hats.",
+      "image": "../images/esti.jpg",
+      "alt": "picture of Esther Mager Garfield",
+      "links": []
+    },
+    {
+      "name": "Artemis Christoforatos",
+      "credentials": "",
+      "title": "Undergraduate Researcher",
+      "bio": "Artemis is a senior at Barnard College studying Neuroscience and Behavior. Her work involves conducting animal behavior and histological analysis to investigate the link between behavioral phenotypes and structural differences in the brain physiology of <i>Chd8</i><sup>+/-</sup> mice.",
+      "image": "../images/artemis.jpeg",
+      "alt": "picture of Artemis Christoforatos",
+      "links": []
+    },
+    {
+      "name": "Reina Barua",
+      "credentials": "",
+      "title": "Undergraduate Researcher",
+      "bio": "Reina is a student at Columbia University studying Sociology. Her work employs histological and computational analyses using computer vision to investigate the brain circuitry of <i>Chd8</i><sup>+/-</sup> mice.",
+      "image": "../images/reena.jpeg",
+      "alt": "picture of Reena Barua",
+      "links": []
+    }
+  ]
+}

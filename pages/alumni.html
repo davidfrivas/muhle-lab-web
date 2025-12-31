@@ -48,92 +48,8 @@
                 </div>
             </div>
 
-            <div class="wrapper page-content">
-                <div class="lab-member">
-                    <div class="member-summary">
-                        <h2>David Rivas</h2>
-                        <h3>Research Assistant (2019-2026)</h3>
-                        <p>David joined the Muhle lab in 2019 as a Research Assistant. His roles included conducting animal behavior, electroencephalography (EEG), computational analyses, histology, and laboratory/mouse colony management. In January 2026, David entered a new role as a Backend Developer at IBM.
-                        </p>
-                        <a class="linkedin" href="https://www.linkedin.com/in/david-f-rivas/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                        <a class="github" href="https://github.com/davidfrivas" target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </div>
-                    <img src="../images/david-rivas.jpeg" alt="picture of David Rivas">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member even">
-                    <div class="member-summary">
-                        <h2>Sam Dhanani</h2>
-                        <h3>Research Assistant (2023-2025)</h3>
-                        <p>During her time in the lab, Sam studied the
-                        behavior and neural circuitry of <em>Chd8</em> haploinsufficient mice. She pioneered assays such as operand conditioning and fiber photometry. Sam is currently a
-                        PhD student in Neuroscience and Behavior at University of Massachusetts Amherst.
-                        </p>
-                    </div>
-                    <img src="../images/sam-dhanani.jpg" alt="picture of Sam Dhanani">
-                </div>
-                <hr class="page-break">
-                <div class="lab-member">
-                    <div class="member-summary">
-                        <h2>Yun-Kyung Kim</h2>
-                        <h3>Research Assistant (2020-2022)</h3>
-                        <p>During her time in the lab, Yun-Kyung studied the
-                        molecular biology of <em>Chd8</em> haploinsufficiency in
-                        mice. She employed techniques such as chromatin
-                        immunoprecipitation (ChIP), RNA extraction, cDNA synthesis, qRT-PCR
-                        analysis, and western blotting. Additionally, she
-                        performed a comprehensive medical literature review of the association of
-                        likely damaging human <em>CHD8</em> mutations with seizures and abnormal EEG. Yun-Kyung is currently a
-                        medical student at Wright State University Boonshoft School
-                        of Medicine.
-                        </p>
-                    </div>
-                    <img src="../images/yun-kyung.jpg" alt="picture of Yun-Kyung Kim">
-                </div>
-                <hr class="page-break">
-                <h2 class="alumni-list-title">Lab Alumni</h2>
-                <div class="alumni-list">
-                    <p><span>Arrinne Hoque</span> (2023-2025)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Nicole Pimentel Soler</span> (2023-2025)<br>
-                        <i>Graduate Researcher, Columbia University</i>
-                    </p>
-                    <p><span>Jeanette Marie Luna</span> (2023-2025)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Hannah Kim</span> (2022-2023)<br>
-                        <i>Graduate Researcher, Columbia Universty</i>
-                    </p>
-                    <p><span>Mahdia Begum</span> (2021-2023)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Catalina Lopez</span> (2020-2022)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Katina Pierre-Louis</span> (2020-2022)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Kaitlyn Hazzard</span> (2020-2021)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>
-                    </p>
-                    <p><span>Claudia Weiss</span> (2020-2021)<br>
-                        <i>Undergraduate Researcher, Barnard College</i>    
-                    </p>
-                    <p><span>Britt Bistis</span> (2020)<br>
-                        <i>Undergraduate Researcher, Yale University</i>
-                    </p>
-                    <p><span>Morgan Healey</span> (2020)<br>
-                        <i>Undergraduate Researcher, Brown University</i>
-                    </p>
-                    <p><span>Isabel Stobin</span> (2020)<br>
-                        <i>High School Student</i>    
-                    </p>
-                </div>
+            <div class="wrapper page-content" id="alumni-container">
+                <!-- Alumni loaded by JavaScript -->
             </div>
 
             <div class="footer">
@@ -165,5 +81,55 @@
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+        <script>
+        fetch('../data/alumni.json')
+          .then(response => response.json())
+          .then(data => {
+            const container = document.getElementById('alumni-container');
+            let html = '';
+            
+            // Add featured alumni
+            data.featured.forEach((alumni, index) => {
+              const isEven = index % 2 === 1 ? ' even' : '';
+              const socialLinks = alumni.social.map(social => {
+                const icon = social.type === 'linkedin' ? 'logo-linkedin' : 'logo-github';
+                const className = social.type;
+                return `
+                  <a class="${className}" href="${social.url}" target="_blank">
+                    <ion-icon name="${icon}"></ion-icon>
+                  </a>
+                `;
+              }).join('');
+              
+              html += `
+                <div class="lab-member${isEven}">
+                  <div class="member-summary">
+                    <h2>${alumni.name}</h2>
+                    <h3>${alumni.title}</h3>
+                    <p>${alumni.bio}</p>
+                    ${socialLinks}
+                  </div>
+                  <img src="${alumni.image}" alt="${alumni.alt}">
+                </div>
+                <hr class="page-break">
+              `;
+            });
+            
+            // Add alumni list section
+            html += '<h2 class="alumni-list-title">Lab Alumni</h2><div class="alumni-list">';
+            data.alumniList.forEach(alumni => {
+              html += `
+                <p><span>${alumni.name}</span> (${alumni.years})<br>
+                  <i>${alumni.position}</i>
+                </p>
+              `;
+            });
+            html += '</div>';
+            
+            container.innerHTML = html;
+          })
+          .catch(error => console.error('Error loading alumni:', error));
+        </script>
     </body>
 </html>
