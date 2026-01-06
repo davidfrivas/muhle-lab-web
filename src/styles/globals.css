@@ -1,0 +1,127 @@
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+/* Wrapper utility */
+.wrapper {
+  @apply w-[min(90%,75rem)] mx-auto;
+}
+
+/* Screen reader only */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Rich text styling for MDX content */
+.prose-lab {
+  @apply leading-relaxed;
+}
+
+.prose-lab p {
+  @apply mb-4 leading-[1.8];
+}
+
+.prose-lab a {
+  @apply text-lab-link hover:text-lab-link-hover transition-colors;
+}
+
+.prose-lab strong {
+  @apply font-semibold;
+}
+
+.prose-lab em,
+.prose-lab i {
+  @apply italic;
+}
+
+/* Gene notation styling */
+.gene-name {
+  @apply italic;
+}
+
+.gene-notation sup {
+  @apply text-[0.6em] align-super leading-none;
+}
+
+/* Link styles */
+a {
+  @apply no-underline text-inherit;
+}
+
+/* Page break utility */
+.page-break {
+  @apply w-full my-8 border-t border-black;
+}
+
+/* Horizontal rule */
+hr {
+  @apply border-t border-black/50;
+}
+
+/* Button base styles */
+.btn {
+  @apply px-4 py-2.5 border uppercase tracking-wider cursor-pointer transition-all duration-200;
+}
+
+.btn-outline {
+  @apply border-black text-black bg-transparent hover:bg-black hover:text-white;
+}
+
+.btn-outline-white {
+  @apply border-white text-white bg-transparent hover:bg-white hover:text-black;
+}
+
+.btn-primary {
+  @apply border-none rounded-full text-white bg-lab-dark hover:bg-lab-purple;
+}
+
+/* Swiper customization */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white !important;
+}
+
+/* Ion-icon sizing */
+ion-icon {
+  @apply text-5xl;
+}
+
+/* Social icon colors */
+.icon-linkedin {
+  @apply text-lab-link hover:text-lab-link-hover transition-colors;
+}
+
+.icon-github {
+  @apply text-black hover:text-lab-purple transition-colors;
+}
+
+/* Funding status badge */
+.funding-status-badge {
+  @apply flex p-2 w-fit text-white font-light text-2xl uppercase bg-lab-dark;
+}
+
+.funding-status-badge hr {
+  @apply self-stretch mx-8 my-0 border border-lab-purple;
+}
